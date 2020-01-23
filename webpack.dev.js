@@ -3,7 +3,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     devtool: "eval-cheap-module-source-map",
-    entry: "./src/index.js",
+    entry: {
+        index: "./src/index.js",
+        internet: "./src/project/internet.js"
+    },
     devServer: {
         port: 8080,
         contentBase: path.join(__dirname, "dist")
@@ -91,7 +94,15 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./index.html",
-            inject: true
+            inject: true,
+            chunks: ["index"],
+            filename: "index.html"
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/project/internet.html",
+            inject: true,
+            chunks: ["internet"],
+            filename: "internet.html"
         })
     ]
 };
