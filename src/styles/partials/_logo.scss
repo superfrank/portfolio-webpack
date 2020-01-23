@@ -1,0 +1,40 @@
+.logo {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+
+  @include mq(tablet) {
+    left: 20px;
+  }
+
+  @include mq(wide) {
+    left: 5%;
+    top: 2.5vh;
+  }
+
+  svg {
+    width: auto;
+    height: 5vw;
+
+    @include mq(desktop) {
+      width: 79px;
+      height: 32px;
+    }
+  }
+}
+
+.logo-home {
+  .logo__frame,
+  .logo__eyes {
+    fill: $brand-1;
+  }
+}
+
+.logo-article {
+  .logo__frame,
+  .logo__eyes {
+    fill: $black;
+  }
+}

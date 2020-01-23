@@ -1,0 +1,10 @@
+.contact-me {
+  display: block;
+  width: 100%;
+  background-color: $brand-1;
+  color: $white;
+  font-family: $sans-serif;
+  padding-top: 20px;
+  padding-bottom: 24px;
+  @include transition-duration(300ms);
+}

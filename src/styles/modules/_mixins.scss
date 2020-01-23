@@ -1,0 +1,10 @@
+@mixin transition-duration($duration) {
+  -webkit-transition-duration: $duration;
+  -moz-transition-duration: $duration;
+  -o-transition-duration: $duration;
+  transition-duration: $duration;
+}
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}

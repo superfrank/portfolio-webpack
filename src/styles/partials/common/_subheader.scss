@@ -1,0 +1,12 @@
+.featured-project__subheader {
+  color: $dark-grey;
+  font-size: $font-size-three;
+  font-family: $sans-serif;
+  font-size: $font-size-five;
+  line-height: $line-height;
+  font-weight: normal;
+
+  @include mq(desktop) {
+    font-size: $font-size-two;
+  }
+}

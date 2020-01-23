@@ -1,0 +1,14 @@
+.project-list__meta {
+    color: $dark-grey;
+    font-family: $sans-serif;
+    font-size: 9px;
+    line-height: 1.0;
+    font-weight: normal;
+    text-align: right;
+    @include mq(mobileMedium) {
+      font-size: 9px;
+    }
+    @include mq(mobileLandscape) {
+      font-size: $font-size-meta;
+    }
+}

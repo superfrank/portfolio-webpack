@@ -1,0 +1,32 @@
+.about {
+  // margin: 0;
+  text-align: left;
+  display: block;
+  margin-bottom: 15vh;
+
+  &__header {
+    font-size: $font-size-ten;
+    line-height: 1;
+    // padding top calculates logo size as it's absolutely positioned
+    padding-top: calc(5vw + 1rem);
+
+    @include mq(desktop) {
+      font-size: $font-size-five;
+      padding-top: calc(32px + 1rem);
+    }
+    @include mq(wide) {
+      font-size: $font-size-five;
+      padding-top: calc(2.5vh + 32px);
+    }
+  }
+}
+
+.info__main {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.info__copyright {
+  font-size: $font-size-body;
+  color: $white;
+}

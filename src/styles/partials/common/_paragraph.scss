@@ -1,0 +1,12 @@
+p,
+.text__body {
+  margin-top: 0;
+  margin-bottom: 2vw;
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+
+  @include mq(desktop) {
+    font-size: 1.5vw;
+    margin-bottom: 1.5vw;
+  }
+}

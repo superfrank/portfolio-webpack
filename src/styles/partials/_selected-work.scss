@@ -1,0 +1,54 @@
+.animate span {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+.animate.backwards > span {
+  animation: animateBackwards 1s ease-in-out forwards;
+  margin-left: 0px;
+  color: $brand-1;
+}
+.animate.forwards > span {
+  margin-right: -2em;
+  animation: animateForwards 1s ease-in-out forwards;
+  color: $brand-1;
+}
+.animate.mixed > span {
+  //   margin-top: 1em;
+  margin-bottom: calc(10vw + 10px);
+}
+
+.animate.mixed > span {
+  animation: animateMixed 1s ease-in-out forwards;
+}
+
+@keyframes animateForwards {
+  from {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    top: calc(8vw);
+    transform: rotate(15deg);
+  }
+}
+@keyframes animateBackwards {
+  from {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    top: calc(8vw);
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes animateMixed {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(8vw);
+  }
+}

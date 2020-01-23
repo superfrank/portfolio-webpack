@@ -1,0 +1,26 @@
+// Fonts
+$serif: "ff-tisa-web-pro", Georgia, serif;
+$sans-serif: "GT-Pressura-Regular", "Futura", sans-serif;
+
+// Type Sizes
+$font-size-ten: 10vw;
+$font-size-eight: 8vw;
+$font-size-five: 5vw;
+$font-size-three: 3vw;
+$font-size-two: 2vw;
+$font-size-one: 1vw;
+$font-size-body: 1.8rem;
+$font-size-meta: 1.2rem;
+
+// Line Height
+$line-height: 1.2;
+$line-height-body: 1.5;
+
+@font-face {
+    font-family: "GT-Pressura-Regular";
+    src: url("fonts/GT-Pressura-Regular.woff") format("woff"),
+        url("fonts/GT-Pressura-Regular.ttf") format("truetype"),
+        url("fonts/GT-Pressura-Regular.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}

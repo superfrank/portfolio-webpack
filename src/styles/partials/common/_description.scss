@@ -1,0 +1,11 @@
+.project-list__description {
+  color: $black;
+  font-family: $sans-serif;
+  font-size: $font-size-body;
+  line-height: $line-height;
+  font-weight: normal;
+
+  @include mq(tablet) {
+    font-size: $font-size-five;
+  }
+}
