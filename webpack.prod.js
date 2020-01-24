@@ -96,6 +96,17 @@ module.exports = {
                         loader: "file-loader"
                     }
                 ]
+            },
+            {
+                test: /\.(mov|mp4|webm)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[path][name].[ext]?hash=[hash:20]"
+                        }
+                    }
+                ]
             }
         ]
     },
