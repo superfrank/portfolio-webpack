@@ -1,7 +1,7 @@
 require("normalize.css/normalize.css");
 require("./styles/index.scss");
 
-const myVideo = require("./assets/media/internetone.mp4");
+// const myVideo = require("./assets/media/internetone.mp4");
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("test");
