@@ -35,12 +35,24 @@
             height: auto;
             position: relative;
         }
+        &__container__mobile {
+            max-width: 40vw;
+            @include mq(desktop) {
+                max-width: 20vw;
+            }
+        }
         &__floating {
             box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.4);
             border-radius: 0 0 4px 4px;
             @include mq(desktop) {
                 box-shadow: 0 24px 48px 0 rgba(0, 0, 0, 0.4);
                 border-radius: 0 0 8px 8px;
+            }
+        }
+        &__floating__mobile {
+            border-radius: 8px;
+            @include mq(desktop) {
+                border-radius: 16px;
             }
         }
         &__fade {
