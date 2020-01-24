@@ -98,12 +98,13 @@ module.exports = {
                 ]
             },
             {
+                // Load all videos
                 test: /\.(mov|mp4|webm)$/,
                 use: [
                     {
                         loader: "file-loader",
                         options: {
-                            name: "[path][name].[ext]?hash=[hash:20]"
+                            name: "[name].[hash:20].[ext]"
                         }
                     }
                 ]

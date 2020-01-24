@@ -90,6 +90,7 @@ module.exports = {
                 ]
             },
             {
+                // Load all videos
                 test: /\.(mov|mp4|webm)$/,
                 use: [
                     {
