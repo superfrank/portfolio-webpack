@@ -8,12 +8,16 @@
         }
     }
     .item {
+        // margin-top: 3rem;
+        // @include mq(desktop) {
+        //     margin-top: 5vh;
+        // }
+    }
+    .image {
         margin-bottom: 2rem;
         @include mq(desktop) {
             margin-bottom: 5vh;
         }
-    }
-    .image {
         img {
             max-width: 100%;
             max-height: 100%;
@@ -55,31 +59,41 @@
                 border-radius: 16px;
             }
         }
-        &__fade {
-            position: absolute;
-            padding-top: 5vw;
-            opacity: 0;
-            top: 0;
-            animation: fade 4s infinite ease-in-out;
-            transform: rotateZ(360deg);
-            // animation-delay: 2s;
-            // -webkit-transition: opacity 1s ease-in-out;
-            // -moz-transition: opacity 1s ease-in-out;
-            // -o-transition: opacity 1s ease-in-out;
-            // transition: opacity 1s ease-in-out;
-            box-shadow: none;
+        &__mini {
+            width: 50%;
+
+            @include mq(desktop) {
+                width: 100%;
+            }
+        }
+        &__caption {
+            margin-bottom: 0;
+
+            @include mq(desktop) {
+                margin-bottom: 5vh;
+            }
         }
     }
     .text {
+        display: grid;
+        margin-top: 2.8rem;
+        margin-bottom: 1rem;
+        @include mq(desktop) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 1.5vw;
+            margin-bottom: 2vw;
+            margin-top: 5vw;
+        }
         &__header {
-            grid-column: 1 / span 1;
             @include mq(desktop) {
+                grid-column: 1 / span 1;
                 margin-top: -0.5vw;
             }
         }
-
-        p {
-            grid-column: 2 / span 2;
+    }
+    .grid:first-of-type {
+        .text {
+            margin-top: 0;
         }
     }
     .caption {
@@ -89,7 +103,6 @@
             width: auto;
             height: 4vw;
             transform: rotate(90deg);
-            margin-top: 20px;
             display: inline;
 
             @include mq(desktop) {

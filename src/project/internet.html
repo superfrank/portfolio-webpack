@@ -72,8 +72,10 @@
           </div>
           <div class="content wrapper">
             <div class="grid item">
-              <h2 class="text text__header grid__1-1">India</h2>
+              <div class="text grid__1-3">
+              <h2 class="text__header grid__1-1">India</h2>
               <p class="text__body grid__2-3">With over 200 million users of WhatsAppIndia was a great place to start, as using mobile chat messages as a device let readers know this isn’t a regular news article and starts them scrolling</p>
+            </div>
             </div>
             <div class="grid item">
               <div class="image grid__1-4 image__background">
@@ -86,19 +88,21 @@
               </div>
             </div>
             <div class="grid item">
-              <div class="image grid__2-3">
+              <div class="image image__caption grid__2-3">
                 <div class="image__inline">
                   <img class="image__two" src="<%= require('../../src/assets/internet/article/image-2.png') %>"/>
                 </div>
               </div>
-                <p class="text__body caption grid__4-4 align-end">
+                <p class="text__body caption grid__4-4">
                   <svg class="svg__hand" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.2 31.1"><defs><style>.cls-1{fill:none;stroke:#e55743;stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>vector-hand</title><path class="cls-1" d="M24,1a2.82,2.82,0,0,0-2.2,1.08A3.34,3.34,0,0,0,21,4.2a2.81,2.81,0,0,0,.85,2.05l4.21,4a.3.3,0,0,1,.08.21.36.36,0,0,1-.24.13H3.7a2.46,2.46,0,1,0,0,4.9H17.3a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H15.4a2.72,2.72,0,0,0-2.7,2.9,2.41,2.41,0,0,0,2.4,2.4h2.7a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H16.6a2.4,2.4,0,0,0,0,4.8h3.1a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H18.12a1,1,0,0,0-.92.6,2,2,0,0,0-.2.8,1.88,1.88,0,0,0,1.9,1.9c.12,0,11.85-.07,14.62-1.46,3-1.39,5.68-3.11,5.68-8.74,0-5.41-2.8-8.21-6-11.46l-.61-.6c-3-2.9-5.36-5-6.13-5.76l-.28-.25-.07-.07A3.32,3.32,0,0,0,24,1Z"/></svg>
                   <span class="caption__header">Extra touch</span><span class="caption__body">The time of the messages were at your computer's time</span></p>
             </div>
             <div class="grid item">
-              <h2 class="text text__header grid__1-1">China</h2>
-              <p class="text__body grid__2-3">I wanted this section to feel like China was blocking western media but that you almost forget because of the alternatives offered. There’s a strong focus on animation as a reference to Weibo (a popular microblog)
-              </p>
+              <div class="text grid__1-3">
+                <h2 class="text__header grid__1-1">China</h2>
+                <p class="text__body grid__2-3">I wanted this section to feel like China was blocking western media but that you almost forget because of the alternatives offered. There’s a strong focus on animation as a reference to Weibo (a popular microblog)
+                </p>
+              </div>
             </div>
             <div class="grid item">
               <div class="image grid__1-4 image__background">
@@ -111,7 +115,7 @@
               </div>
             </div>
             <div class="grid item">
-              <div class="image grid__2-2">
+              <div class="image image__mini grid__2-2">
                 <div class="image__inline">
                   <video class="video" preload="auto" playsinline="" autoplay="" loop="" muted="" autobuffer="false" poster="<%= require('../../src/assets/internet/media/poster-internet-china-3.png') %>">
                     <source src="<%= require('../../src/assets/internet/media/internet-china-3.mp4') %>" type="video/mp4">
@@ -129,9 +133,11 @@
               </div>
             </div>
             <div class="grid item">
-              <h2 class="text text__header grid__1-1">Cuba</h2>
+              <div class="text grid__1-3">
+              <h2 class="text__header grid__1-1">Cuba</h2>
               <p class="text__body grid__2-3">This was where the idea for pixelated design came from as we got given screenshots of “The  weekly packet” which was running on an old version of Windows. The design heavily leans on how Windows 3.11 looked and functioned
               </p>
+              </div>
             </div>
             <div class="grid item">
               <div class="image grid__1-4 image__background">
@@ -144,9 +150,11 @@
               </div>
             </div>
             <div class="grid item">
-              <h2 class="text text__header grid__1-1">Russia</h2>
-              <p class="text__body grid__2-3">A recreation of VK the Facebook clone. Has little touches like being able to like each post, or add The Kremlin as a possible friend
-              </p>
+              <div class="text grid__1-3">
+                <h2 class="text__header grid__1-1">Russia</h2>
+                <p class="text__body grid__2-3">A recreation of VK the Facebook clone. Has little touches like being able to like each post, or add The Kremlin as a possible friend
+                </p>
+              </div>
             </div>
             <div class="grid item">
               <div class="image grid__1-4 image__background">
@@ -164,14 +172,36 @@
                   <img class="image__floating image__floating__mobile" src="<%= require('../../src/assets/internet/article/internet-russia-2.png') %>"/>
                 </div>
               </div>
-              <div class="image grid__3-3 align-end">
+              <div class="image image__mini grid__3-3 align-end">
                 <div class="image__inline">
                   <img class="image__seven" src="<%= require('../../src/assets/internet/article/russia-eye-3.gif') %>"/>
                 </div>
               </div>
-              <div class="image grid__4-4">
+              <div class="image image__mini grid__4-4">
                 <div class="image__inline">
-                  <img class="image__seven" src="<%= require('../../src/assets/internet/article/russia-eye-2.gif') %>"/
+                  <img class="image__seven" src="<%= require('../../src/assets/internet/article/russia-eye-2.gif') %>"/>
+                </div>
+              </div>
+            </div>
+            <div class="grid item">
+              <div class="text grid__1-3">
+              <h2 class="text__header grid__1-1">Outcome</h2>
+                <p class="text__body grid__2-3">Overall, the article did really well. The project went on to win a <a href="https://www.dandad.org/awards/professional/2019/graphic-design/231385/the-guardian-the-internet-but-not-as-we-know-it/">D&AD Wooden Pencil, 2019</a> and was featured in <a href="https://www.creativereview.co.uk/the-guardian-brings-the-worlds-internet-use-to-life-in-animated-feature/">Creative Review.</a></p>
+                <p class="text__body grid__2-3">The part I'm particularly proud of is the time readers spent viewing the article being over double that of a regular interactive. I'd hope it's because the piece is so visual, people enjoyed scrolling to the very end. Just like you've “enjoyed” scrolling to the very end of this...
+                </p>
+              </div>
+              <p class="text__body grid__2-3"><span class="caption__header">Page views over 24 hours</span>
+              </p>
+                <div class="image grid__2-3">
+                  <div class="image__inline">
+                    <img class="image__eight" src="<%= require('../../src/assets/internet/article/data-1.png') %>"/>
+                  </div>
+                </div>
+              <p class="text__body grid__2-3"><span class="caption__header">Median attention time over 24 hours</span>
+              </p>
+              <div class="image grid__2-3">
+                <div class="image__inline">
+                  <img class="image__eight" src="<%= require('../../src/assets/internet/article/data-2.png') %>"/>
                 </div>
               </div>
             </div>
