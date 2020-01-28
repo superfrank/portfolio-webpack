@@ -1,84 +1,86 @@
 .project-list {
-  display: flex;
-  list-style: none;
-  margin-top: calc(10vw + 80px);
-  margin-bottom: calc(10vw + 80px);
-
-  @include mq(wide) {
-    margin-bottom: calc(10vw + 40px);
-  }
-
-  &__grid {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 40% 60%;
-  }
-  &__col-1 {
-    display: block;
-    position: relative;
-    justify-self: start;
-    grid-column: span 2;
-    @include mq(desktop) {
-      justify-self: end;
-      grid-column: span 1;
-    }
-    margin-top: -8.5vw;
-  }
-  &__col-2 {
-    display: grid;
-    grid-template-columns: auto;
-    align-self: end;
-    // max-width: 672px;
-    position: relative;
-    grid-column: span 2;
-    @include mq(desktop) {
-      justify-self: center;
-      grid-column: 2 / span 1;
-    }
-  }
-  &__item {
-    width: 100%;
-
-    @include mq(desktop) {
-      width: 500px;
-    }
+    display: flex;
+    list-style: none;
+    margin-top: calc(10vw + 80px);
+    margin-bottom: calc(10vw + 80px);
 
     @include mq(wide) {
-      width: 672px;
+        margin-bottom: calc(10vw + 40px);
     }
-  }
 
-  &__number {
-    text-align: right;
-    color: $brand-1;
-  }
-
-  &__link {
-    // background-image: linear-gradient(0deg,$brand-1 100%,$brand-1 0%);
-    // background-repeat: repeat-x;
-    // background-position: 0 92%;
-    // background-color: transparent;
-    // background-size: 200% 3px;
-    // transition: opacity 5s ease-in-out;
-    line-height: 1.2;
-    transition: border 0.5s linear;
-    border-bottom: 2px solid $brand-1;
-    border-bottom-color: transparent;
-    &:hover {
-      border-bottom-color: $brand-1;
-      // background-image: linear-gradient(0deg,$brand-1 100%,$brand-1 0%);
+    &__grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 40% 60%;
     }
-  }
+    &__col-1 {
+        display: block;
+        position: relative;
+        justify-self: start;
+        grid-column: span 2;
+        @include mq(desktop) {
+            justify-self: end;
+            grid-column: span 1;
+        }
+        margin-top: -10vw;
+    }
+    &__col-2 {
+        display: grid;
+        grid-template-columns: auto;
+        align-self: end;
+        // max-width: 672px;
+        position: relative;
+        grid-column: span 2;
+        margin-top: 10vw;
+        @include mq(desktop) {
+            margin-top: 0;
+            justify-self: center;
+            grid-column: 2 / span 1;
+        }
+    }
+    &__item {
+        width: 100%;
 
-  .featured-project__header {
-    line-height: 1.6;
-  }
+        @include mq(desktop) {
+            width: 500px;
+        }
+
+        @include mq(wide) {
+            width: 672px;
+        }
+    }
+
+    &__number {
+        text-align: right;
+        color: $brand-1;
+    }
+
+    &__link {
+        // background-image: linear-gradient(0deg,$brand-1 100%,$brand-1 0%);
+        // background-repeat: repeat-x;
+        // background-position: 0 92%;
+        // background-color: transparent;
+        // background-size: 200% 3px;
+        // transition: opacity 5s ease-in-out;
+        line-height: 1.2;
+        transition: border 0.5s linear;
+        border-bottom: 2px solid $brand-1;
+        border-bottom-color: transparent;
+        &:hover {
+            border-bottom-color: $brand-1;
+            // background-image: linear-gradient(0deg,$brand-1 100%,$brand-1 0%);
+        }
+    }
+
+    .featured-project__header {
+        line-height: 1.6;
+    }
 }
 
 .title-alt {
-  color: $black;
+    color: $black;
 }
 
 .project-list__item {
-  // margin-bottom: 3vw;
+    // margin-bottom: 3vw;
 }

@@ -1,231 +1,231 @@
 .featured-project {
-  display: grid;
-  &__image-wrapper {
     display: grid;
-    position: relative;
-    @include mq(desktop) {
-      width: 60%;
-      justify-self: end;
-    }
-  }
-  &__image {
-    max-width: 90%;
-    justify-self: center;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-
-    @include mq(desktop) {
-      max-width: 500px;
-    }
-
-    @include mq(wide) {
-      max-width: 672px;
-    }
-
-    .gif {
-      position: absolute;
-      max-height: auto;
-      &__one {
-        right: 25.5%;
-        top: 53%;
-        max-width: 68%;
+    &__image-wrapper {
+        display: grid;
+        position: relative;
         @include mq(desktop) {
-          right: 23%;
-          top: 53%;
-          max-width: 76%;
+            width: 60%;
+            justify-self: end;
         }
-      }
-      &__two {
-        left: 19%;
-        top: 13%;
-        max-width: 11%;
+    }
+    &__image {
+        max-width: 90%;
+        justify-self: center;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
         @include mq(desktop) {
-          left: 15%;
-          max-width: 13%;
+            max-width: 500px;
         }
-      }
-      &__three {
-        right: 5.5%;
-        top: 32%;
-        width: 15%;
+
+        @include mq(wide) {
+            max-width: 672px;
+        }
+
+        .gif {
+            position: absolute;
+            max-height: auto;
+            &__one {
+                right: 25.5%;
+                top: 53%;
+                max-width: 68%;
+                @include mq(desktop) {
+                    right: 23%;
+                    top: 53%;
+                    max-width: 76%;
+                }
+            }
+            &__two {
+                left: 19%;
+                top: 13%;
+                max-width: 11%;
+                @include mq(desktop) {
+                    left: 15%;
+                    max-width: 13%;
+                }
+            }
+            &__three {
+                right: 5.5%;
+                top: 32%;
+                width: 15%;
+                @include mq(desktop) {
+                    right: 0.5%;
+                    top: 35%;
+                    width: 16%;
+                }
+            }
+        }
+    }
+    &__image-group {
+        display: grid;
+        position: relative;
+        justify-self: center;
+        max-width: 90%;
         @include mq(desktop) {
-          right: 0.5%;
-          top: 35%;
-          width: 16%;
+            max-width: 500px;
         }
-      }
-    }
-  }
-  &__image-group {
-    display: grid;
-    position: relative;
-    justify-self: center;
-    max-width: 90%;
-    @include mq(desktop) {
-      max-width: 500px;
-    }
 
-    @include mq(wide) {
-      max-width: 672px;
+        @include mq(wide) {
+            max-width: 672px;
+        }
     }
-  }
-  &__block {
-    width: 100%;
-    height: 60%;
-    background-color: $brand-1;
-    position: absolute;
-    align-self: center;
-    z-index: -1;
-    @include mq(desktop) {
-      height: 60%;
+    &__block {
+        width: 100%;
+        height: 60%;
+        background-color: $brand-1;
+        position: absolute;
+        align-self: center;
+        z-index: -1;
+        @include mq(desktop) {
+            height: 60%;
+        }
+        @include mq(wide) {
+            height: 360px;
+        }
     }
-    @include mq(wide) {
-      height: 360px;
-    }
-  }
-  &__circle {
-    position: absolute;
-    bottom: -40px;
-    right: 20%;
-    height: 8rem;
-    width: 8rem;
+    &__circle {
+        position: absolute;
+        bottom: -40px;
+        right: 20%;
+        height: 8rem;
+        width: 8rem;
 
-    @include mq(tablet) {
-      bottom: -42px;
-      // right: calc(18%);
-      height: 10rem;
-      width: 10rem;
-      svg {
-        height: auto;
-        width: 10rem;
-      }
-      @include mq(desktop) {
-        right: 6rem;
-      }
-      @include mq(wide) {
-        right: 10rem;
-      }
-    }
+        @include mq(tablet) {
+            bottom: -42px;
+            // right: calc(18%);
+            height: 10rem;
+            width: 10rem;
+            svg {
+                height: auto;
+                width: 10rem;
+            }
+            @include mq(desktop) {
+                right: 6rem;
+            }
+            @include mq(wide) {
+                right: 10rem;
+            }
+        }
 
-    svg {
-      // animation: spin 8s infinite linear;
+        svg {
+            // animation: spin 8s infinite linear;
+        }
     }
-  }
-  &__arrow--line {
-    display: block;
-    position: absolute;
-    bottom: -52px;
-    right: 0px;
-    height: 84px;
-    width: 8px;
-    @include mq(tablet) {
-      height: 120px;
-      width: 16px;
-      bottom: -64px;
-      right: -8px;
-      overflow: hidden;
+    &__arrow--line {
+        display: block;
+        position: absolute;
+        bottom: -52px;
+        right: 0px;
+        height: 84px;
+        width: 8px;
+        @include mq(tablet) {
+            height: 120px;
+            width: 16px;
+            bottom: -70px;
+            right: -8px;
+            overflow: hidden;
+        }
+        @include mq(desktop) {
+            display: none;
+        }
     }
-    @include mq(desktop) {
-      display: none;
-    }
-  }
-  &__arrow--top {
-    display: block;
-    position: absolute;
-    bottom: -44px;
-    right: 0px;
-    height: 84px;
-    width: 8px;
-    svg {
-      animation: arrow 5s infinite ease-in-out;
-    }
+    &__arrow--top {
+        display: block;
+        position: absolute;
+        bottom: -44px;
+        right: 0px;
+        height: 84px;
+        width: 8px;
+        svg {
+            animation: arrow 5s infinite ease-in-out;
+        }
 
-    @include mq(tablet) {
-      height: 168px;
-      width: 16px;
-      bottom: -80px;
-      right: -8px;
+        @include mq(tablet) {
+            height: 168px;
+            width: 16px;
+            bottom: -80px;
+            right: -8px;
+        }
+        @include mq(desktop) {
+            bottom: 0px;
+            left: -104px;
+            transform: rotate(90deg);
+        }
+        @include mq(wide) {
+            bottom: 12px;
+        }
     }
-    @include mq(desktop) {
-      bottom: 0px;
-      left: -104px;
-      transform: rotate(90deg);
+    &__title {
+        @include mq(desktop) {
+            margin-top: -153px;
+            width: 50%;
+        }
+        @include mq(wide) {
+            margin-top: -165px;
+            width: 50%;
+        }
     }
-    @include mq(wide) {
-      bottom: 12px;
+    &__header {
+        position: relative;
+        display: block;
     }
-  }
-  &__title {
-    @include mq(desktop) {
-      margin-top: -153px;
-      width: 50%;
+    &__subheader {
+        margin-top: 5.8rem;
+        position: relative;
+        display: block;
+        width: 100%;
+        @include mq(tablet) {
+            margin-top: 7.8rem;
+        }
+        &:before {
+            content: "";
+            border-top: 1px solid $black;
+            width: calc(100% + 6px);
+            height: 1px;
+            display: block;
+            position: absolute;
+            top: -9px;
+            left: -10px;
+            @include mq(tablet) {
+                border-top: 2px solid $black;
+                left: -20px;
+                width: calc(100% + 20px);
+                top: -1rem;
+            }
+            @include mq(desktop) {
+                left: 0px;
+                width: calc(75%);
+                top: -1rem;
+            }
+            @include mq(wide) {
+                left: 0px;
+                width: calc(78%);
+                top: -1rem;
+            }
+        }
     }
-    @include mq(wide) {
-      margin-top: -165px;
-      width: 50%;
-    }
-  }
-  &__header {
-    position: relative;
-    display: block;
-  }
-  &__subheader {
-    margin-top: 5.8rem;
-    position: relative;
-    display: block;
-    width: 100%;
-    @include mq(tablet) {
-      margin-top: 7.8rem;
-    }
-    &:before {
-      content: "";
-      border-top: 1px solid $black;
-      width: calc(100% + 6px);
-      height: 1px;
-      display: block;
-      position: absolute;
-      top: -9px;
-      left: -10px;
-      @include mq(tablet) {
-        border-top: 2px solid $black;
-        left: -20px;
-        width: calc(100% + 20px);
-        top: -1rem;
-      }
-      @include mq(desktop) {
-        left: 0px;
-        width: calc(75%);
-        top: -1rem;
-      }
-      @include mq(wide) {
-        left: 0px;
-        width: calc(78%);
-        top: -1rem;
-      }
-    }
-  }
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes arrow {
-  5% {
-    margin-top: -10px;
-  }
-  10% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: 0px;
-  }
+    5% {
+        margin-top: -10px;
+    }
+    10% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: 0px;
+    }
 }

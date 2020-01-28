@@ -9,6 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("test");
 });
 
+anime({
+    targets: ".featured-project__circle",
+    rotate: "720deg",
+    easing: "linear",
+    duration: 8000,
+    direction: "alternate",
+    loop: true
+});
+
 inView(".animated-type h2")
     .on("enter", section => {
         // classList.add adds a class
@@ -17,21 +26,21 @@ inView(".animated-type h2")
             targets: ".first",
             translateY: "8vw",
             rotate: "-15deg",
-            delay: "2000",
-            easing: "spring(1, 80, 10, 0)"
+            delay: 2000,
+            easing: "spring(2, 80, 10, 0)"
         });
         anime({
             targets: ".second",
             translateY: "8.5vw",
             rotate: "15deg",
-            delay: "2050",
-            easing: "spring(1, 80, 10, 0)"
+            delay: 2050,
+            easing: "spring(2, 80, 10, 0)"
         });
         anime({
             targets: ".third",
             translateY: "8vw",
-            delay: "2100",
-            easing: "spring(1, 80, 10, 0)"
+            delay: 2100,
+            easing: "spring(2, 80, 10, 0)"
         });
     })
     .on("exit", section => {
