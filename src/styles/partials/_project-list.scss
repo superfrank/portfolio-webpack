@@ -18,11 +18,12 @@
         position: relative;
         justify-self: start;
         grid-column: span 2;
+        margin-top: -10vw;
         @include mq(desktop) {
             justify-self: end;
             grid-column: span 1;
+            margin-top: -8.5vw;
         }
-        margin-top: -10vw;
     }
     &__col-2 {
         display: grid;
