@@ -1,6 +1,7 @@
 require("normalize.css/normalize.css");
 require("./styles/index.scss");
 import inView from "in-view";
+import anime from "animejs";
 
 // const myVideo = require("./assets/media/internetone.mp4");
 
@@ -11,15 +12,33 @@ document.addEventListener("DOMContentLoaded", () => {
 inView(".animated-type h2")
     .on("enter", section => {
         // classList.add adds a class
-        section.classList.add("animate");
         console.log("in-view");
+        anime({
+            targets: ".first",
+            translateY: "8vw",
+            rotate: "-15deg",
+            delay: "2000",
+            easing: "spring(1, 80, 10, 0)"
+        });
+        anime({
+            targets: ".second",
+            translateY: "8.5vw",
+            rotate: "15deg",
+            delay: "2050",
+            easing: "spring(1, 80, 10, 0)"
+        });
+        anime({
+            targets: ".third",
+            translateY: "8vw",
+            delay: "2100",
+            easing: "spring(1, 80, 10, 0)"
+        });
     })
     .on("exit", section => {
-        section.classList.remove("in-viewport");
         console.log("out-view");
     });
 
-inView.threshold(0.2);
+inView.threshold(1);
 
 // window.addEventListener("load", function() {
 //     var delay = 2;

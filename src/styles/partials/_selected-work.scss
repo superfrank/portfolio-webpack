@@ -1,30 +1,41 @@
-.animate span {
+.animate {
     display: block;
     position: relative;
     text-align: center;
 }
 
-.animate.backwards {
-    animation: animateBackwards 1s ease-in-out forwards;
+.mixed {
+}
+.first {
     margin-left: 0px;
     color: $brand-1;
-    position: absolute;
 }
-.animate.forwards {
+.second {
     margin-right: -2em;
-    animation: animateForwards 1s ease-in-out forwards;
     color: $brand-1;
-    position: absolute;
-}
-.animate.mixed {
-    //   margin-top: 1em;
-    margin-bottom: calc(10vw + 10px);
-    position: absolute;
 }
 
-.animate.mixed {
-    animation: animateMixed 1s ease-in-out forwards;
-}
+// .animate.backwards {
+//     animation: animateBackwards 1s ease-in-out forwards;
+//     margin-left: 0px;
+//     color: $brand-1;
+//     position: absolute;
+// }
+// .animate.forwards {
+//     margin-right: -2em;
+//     animation: animateForwards 1s ease-in-out forwards;
+//     color: $brand-1;
+//     position: absolute;
+// }
+// .animate.mixed {
+//     //   margin-top: 1em;
+//     margin-bottom: calc(10vw + 10px);
+//     position: absolute;
+// }
+
+// .animate.mixed {
+//     animation: animateMixed 1s ease-in-out forwards;
+// }
 
 @keyframes animateForwards {
     from {
