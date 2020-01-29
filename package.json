@@ -27,6 +27,8 @@
     "dependencies": {
         "animejs": "^3.1.0",
         "handlebars-loader": "^1.7.1",
+        "imagesloaded": "^4.1.4",
+        "marquee3000": "^1.0.9",
         "normalize.css": "^8.0.1"
     },
     "devDependencies": {

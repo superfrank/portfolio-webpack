@@ -1,47 +1,49 @@
 .marquee3k__container {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  a {
-    color: blue;
-  }
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    a {
+        color: blue;
+    }
 }
 
 .marquee3k__copy {
-  font-size: 40px;
+    font-size: 40px;
 
-  @include mq(desktop) {
-    padding-right: 80vw;
-  }
+    @include mq(desktop) {
+        padding-right: 60vw;
+    }
 }
 
 .marquee__list {
-  display: flex;
-  flex-direction: row;
-  margin-right: 180px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 180px;
 
-  a {
-  }
+    a {
+    }
 }
 
 .marquee__item {
-  position: relative;
-  font-family: arial;
-  &:before {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: calc(2vw + 100% + 1px);
-    background-color: $black;
-    left: -1vw;
-    top: calc(1vw);
-    @include mq(tablet) {
-      width: 2px;
+    position: relative;
+    margin-right: 5vw;
+    // font-family: arial;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: calc(2vw + 100% + 1px);
+        background-color: $black;
+        left: -1vw;
+        top: calc(1vw);
+        @include mq(tablet) {
+            width: 2px;
+        }
+        @include mq(desktop) {
+            height: calc(0.65vw + 100%);
+            left: -0.5vw;
+            top: 0.35vw;
+            margin-right: 2vw;
+        }
     }
-    @include mq(desktop) {
-      height: calc(0.65vw + 100%);
-      left: -0.5vw;
-      top: 0.35vw;
-    }
-  }
 }

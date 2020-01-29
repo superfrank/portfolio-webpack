@@ -26,9 +26,10 @@
 @import "partials/_article-content";
 @import "partials/_selected-work";
 @import "partials/_marquee";
+@import "partials/_image-hover";
 
 h1 {
-  color: $brand-1;
-  font-family: $sans-serif;
-  -webkit-font-smoothing: antialiased;
+    color: $brand-1;
+    font-family: $sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
