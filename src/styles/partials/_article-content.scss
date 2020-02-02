@@ -76,13 +76,13 @@
     }
     .text {
         display: grid;
-        margin-top: 2.8rem;
-        margin-bottom: 1rem;
+        // margin-top: 1rem;
+        margin-bottom: 2.8rem;
         @include mq(desktop) {
             grid-template-columns: 1fr 1fr 1fr;
             grid-column-gap: 1.5vw;
-            margin-bottom: 2vw;
-            margin-top: 5vw;
+            margin-bottom: 5vw;
+            // margin-top: 2vw;
         }
         &__header {
             @include mq(desktop) {
@@ -97,8 +97,12 @@
         }
     }
     .caption {
-        margin-bottom: 0;
+        margin-bottom: 2.8rem;
         display: block;
+
+        @include mq(desktop) {
+            margin-bottom: 5vw;
+        }
         svg {
             width: auto;
             height: 4vw;
