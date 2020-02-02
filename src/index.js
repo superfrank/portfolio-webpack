@@ -14,10 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 anime({
     targets: ".featured-project__circle",
-    rotate: "720deg",
+    rotate: "360deg",
     easing: "linear",
-    duration: 8000,
-    direction: "alternate",
+    duration: 15000,
     loop: true
 });
 
