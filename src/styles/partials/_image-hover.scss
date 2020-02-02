@@ -1,23 +1,3 @@
-// .block {
-//     flex-direction: column;
-//     align-items: center;
-// }
-
-// .block__title {
-//     position: relative;
-//     font-size: 1rem;
-//     margin: 0 0 1.5rem 0;
-//     padding: 0.5rem 0;
-//     cursor: pointer;
-//     font-family: titling-gothic-fb-wide, sans-serif;
-//     font-weight: 700;
-//     color: var(--color-blocktitle);
-// }
-
-// .block__title:hover {
-//     color: var(--color-blocktitle-hover);
-// }
-
 .block__link {
     position: relative;
     cursor: pointer;
@@ -28,29 +8,12 @@
 .block__link:hover {
     h2 {
         color: $brand-1;
+        transition: color 0.6s ease;
     }
     span {
         color: $brand-1;
+        transition: color 0.6s ease;
     }
-}
-
-// .block__title span,
-// .block__link span,
-// .preview__text-link span {
-//     display: inline-block;
-//     white-space: pre;
-// }
-
-.preview__text {
-    padding: 0 5vw 25vh;
-    line-height: 2;
-    color: var(--color-text);
-}
-
-.preview__text-link {
-    position: relative;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 .block[data-fx="1"] a::after,
@@ -68,6 +31,7 @@ a::after::hover {
     transform: scale3d(0, 1, 1);
     transform-origin: 0% 50%;
     transition: transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: color 0.6s ease;
 }
 
 a.preview__text-link[data-fx="1"]::after,
@@ -80,53 +44,6 @@ a.preview__text-link[data-fx="1"]:hover::after,
 .block[data-fx="2"] a:hover::after,
 a.preview__text-link[data-fx="2"]:hover::after {
     transform: scale3d(1, 1, 1);
-}
-
-.block[data-fx="6"] a::after,
-a.preview__text-link[data-fx="6"]::after {
-    content: "";
-    z-index: -1;
-    width: 100%;
-    bottom: 0.25rem;
-    left: 0;
-    position: absolute;
-    height: 2px;
-    background: currentColor;
-    transform: scale3d(0, 1, 1);
-    transform-origin: 100% 50%;
-    transition: transform 0.7s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-a.preview__text-link[data-fx="6"]::after {
-    bottom: 0;
-}
-
-.block[data-fx="6"] a:hover::after,
-a.preview__text-link[data-fx="6"]:hover::after {
-    transform: scale3d(1, 1, 1);
-}
-
-.block[data-fx="14"] a::after,
-a.preview__text-link[data-fx="14"]::after {
-    content: "";
-    z-index: -1;
-    width: 100%;
-    bottom: 0.25rem;
-    left: 0;
-    position: absolute;
-    height: 2px;
-    background: currentColor;
-    transform: scale3d(0, 1, 1);
-    transform-origin: 0% 50%;
-}
-
-a.preview__text-link[data-fx="14"]::after {
-    bottom: 0;
-}
-
-.block[data-fx="14"] a:hover::after,
-a.preview__text-link[data-fx="14"]:hover::after {
-    animation: loop 0.5s infinite;
 }
 
 @keyframes loop {
@@ -149,12 +66,16 @@ a.preview__text-link[data-fx="14"]:hover::after {
 
 .hover-reveal {
     position: fixed;
-    width: 25vw;
-    height: 15vw;
+    width: 50vw;
+    height: 30vw;
     top: 0;
     left: 0;
     pointer-events: none;
     opacity: 0;
+    @include mq(tablet) {
+        width: 25vw;
+        height: 15vw;
+    }
 }
 
 .hover-reveal__inner,
@@ -170,7 +91,7 @@ a.preview__text-link[data-fx="14"]:hover::after {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #181314;
+    background-color: $black;
 }
 
 .hover-reveal__img {
@@ -179,46 +100,6 @@ a.preview__text-link[data-fx="14"]:hover::after {
 }
 
 @media screen and (min-width: 53em) {
-    .message {
-        display: none;
-    }
-    .frame {
-        position: fixed;
-        text-align: left;
-        z-index: 10000;
-        top: 0;
-        left: 0;
-        display: grid;
-        align-content: space-between;
-        width: 100%;
-        max-width: none;
-        height: 100vh;
-        padding: 2rem;
-        pointer-events: none;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-            "title links"
-            "... ..."
-            "... github";
-    }
-    .frame__title {
-        grid-area: title;
-        padding: 0;
-    }
-    .frame__links {
-        grid-area: links;
-        padding: 0;
-        justify-self: end;
-    }
-    .github {
-        grid-area: github;
-        justify-self: end;
-        margin: 0;
-    }
-    .frame a {
-        pointer-events: auto;
-    }
     .block {
         align-items: flex-start;
     }

@@ -171,6 +171,10 @@
     &__header {
         position: relative;
         display: block;
+
+        &::hover {
+            color: $brand-1;
+        }
     }
     &__subheader {
         margin-top: 5.8rem;
@@ -205,6 +209,18 @@
                 width: calc(78%);
                 top: -1rem;
             }
+        }
+    }
+
+    a {
+        h2 {
+            transition: color 0.6s ease;
+        }
+    }
+
+    a:hover {
+        h2 {
+            color: $brand-1;
         }
     }
 }
