@@ -30,20 +30,20 @@ inView(".animated-type h2")
             targets: ".first",
             translateY: "8vw",
             rotate: "-15deg",
-            delay: 2000,
+            delay: 1500,
             easing: "spring(2, 80, 10, 0)"
         });
         anime({
             targets: ".second",
             translateY: "8.5vw",
             rotate: "15deg",
-            delay: 2050,
+            delay: 1550,
             easing: "spring(2, 80, 10, 0)"
         });
         anime({
             targets: ".third",
             translateY: "8vw",
-            delay: 2100,
+            delay: 1600,
             easing: "spring(2, 80, 10, 0)"
         });
     })
@@ -246,11 +246,11 @@ inView.threshold(1);
         link => new HoverImgFx2(link)
     );
 
-    // Demo purspose only: Preload all the images in the page..
-    const contentel = document.querySelector(".content");
+    // Demo purpose only: Preload all the images in the page..
+    const contentel = document.querySelector(".preview");
     [
         ...document.querySelectorAll(
-            ".block__title, .block__link, .content__text-link"
+            ".block__title, .block__link, .preview__text-link"
         )
     ].forEach(el => {
         const imgsArr = el.dataset.img.split(",");

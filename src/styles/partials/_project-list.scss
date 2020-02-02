@@ -47,7 +47,7 @@
         }
 
         @include mq(wide) {
-            width: 672px;
+            width: auto;
         }
     }
 
