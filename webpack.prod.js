@@ -10,6 +10,7 @@ const buildPath = path.resolve(__dirname, "dist");
 module.exports = {
     devtool: "source-map",
     entry: {
+        tweenmax: "./src/assets/TweenMax.min.js",
         index: "./src/index.js",
         internet: "./src/project/internet.js"
     },

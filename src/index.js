@@ -3,10 +3,10 @@ require("./styles/index.scss");
 import inView from "in-view";
 import anime from "animejs";
 import Marquee3k from "marquee3000";
-import TweenMax from "./assets/TweenMax.min.js";
 import imagesLoaded from "imagesloaded";
+import TweenMax from "./assets/TweenMax.min.js";
 
-// const myVideo = require("./assets/media/internetone.mp4");
+
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("test");
@@ -52,21 +52,6 @@ inView(".animated-type h2")
 
 inView.threshold(1);
 
-// window.addEventListener("load", function() {
-//     var delay = 2;
-//     var nodes = document.querySelectorAll(".animate");
-//     for (var i = 0; i < nodes.length; i++) {
-//         var words = nodes[i].innerText.split(" ");
-//         nodes[i].innerHTML = "";
-//         for (var i2 = 0; i2 < words.length; i2++) {
-//             var item = document.createElement("span");
-//             item.innerText = words[i2];
-//             var calc = delay + (nodes.length + i2) / 3;
-//             item.style.animationDelay = calc + "s";
-//             nodes[i].appendChild(item);
-//         }
-//     }
-// });
 
 // image hover //
 !(function(e) {
@@ -259,7 +244,7 @@ inView.threshold(1);
             imgel.style.width = 0;
             imgel.src = imgsArr[i];
             imgel.className = "preload";
-            contentel.appendChild(imgel);
+            // contentel.appendChild(imgel);
         }
     });
     imagesLoaded(document.querySelectorAll(".preload"), () =>

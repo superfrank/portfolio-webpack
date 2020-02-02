@@ -15,6 +15,20 @@
     margin-bottom: 2.5%;
   }
 
+  &__top{
+    &:hover {
+      svg path {
+        fill: $brand-1;
+        transition: fill 0.6s ease;
+      }
+
+      .footer__description {
+        color: $brand-1;
+        transition:color 0.6s ease;
+      }
+  }
+  }
+
   &__arrow {
     display: inline-block;
     width: auto;
@@ -40,6 +54,7 @@
     @include mq(desktop) {
       font-size: $font-size-two;
     }
+
   }
 }
 

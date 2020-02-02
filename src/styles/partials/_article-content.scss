@@ -99,9 +99,22 @@
     .caption {
         margin-bottom: 2.8rem;
         display: block;
+        .svg__hand--mobile {
+                display: inline;
+                margin-top: 1.5vw;
+            }
+        .svg__hand--desktop {
+            display: none;
+        }
 
         @include mq(desktop) {
             margin-bottom: 5vw;
+            .svg__hand--desktop {
+                display: inline;
+            }
+            .svg__hand--mobile {
+                display: none;
+            }
         }
         svg {
             width: auto;

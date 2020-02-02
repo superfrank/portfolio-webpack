@@ -5,7 +5,8 @@ module.exports = {
     devtool: "eval-cheap-module-source-map",
     entry: {
         index: "./src/index.js",
-        internet: "./src/project/internet.js"
+        internet: "./src/project/internet.js",
+        tweenmax: "./src/assets/TweenMax.min.js"
     },
     devServer: {
         port: 8080,
@@ -36,7 +37,7 @@ module.exports = {
                     },
                     {
                         // translates CSS into CommonJS
-                        loader: "css-loader",
+                        loader: "css-loader?url=false",
                         options: {
                             sourceMap: true
                         }
@@ -85,7 +86,10 @@ module.exports = {
                 test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
                 use: [
                     {
-                        loader: "file-loader"
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[hash:20].[ext]",
+                        }
                     }
                 ]
             },
