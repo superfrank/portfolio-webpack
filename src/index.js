@@ -6,8 +6,6 @@ import Marquee3k from "marquee3000";
 import imagesLoaded from "imagesloaded";
 import TweenMax from "./assets/TweenMax.min.js";
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
     console.log("test");
 });
@@ -51,7 +49,6 @@ inView(".animated-type h2")
     });
 
 inView.threshold(1);
-
 
 // image hover //
 !(function(e) {
@@ -244,7 +241,7 @@ inView.threshold(1);
             imgel.style.width = 0;
             imgel.src = imgsArr[i];
             imgel.className = "preload";
-            // contentel.appendChild(imgel);
+            contentel.appendChild(imgel);
         }
     });
     imagesLoaded(document.querySelectorAll(".preload"), () =>
