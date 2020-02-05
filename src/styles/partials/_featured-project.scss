@@ -119,25 +119,25 @@
     &__arrow--line {
         margin-top: 5.8rem;
         &::before {
-         content: '';
-        display: block;
-        position: absolute;
-        background-color: $black;
-        right: 0.5vw;
-        top: -2rem;
-        height: 7rem;
-        width: 1px;
-        @include mq(tablet) {
-            height: 120px;
-            width: 16px;
-            top: -5.1rem;
-            width: 2px;
-            overflow: hidden;
-            right: 0px;
-        }
-        @include mq(desktop) {
-            display: none;
-        }
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: $black;
+            right: 0.5vw;
+            top: -2rem;
+            height: 7rem;
+            width: 1px;
+            @include mq(tablet) {
+                height: 120px;
+                width: 16px;
+                top: -5.1rem;
+                width: 2px;
+                overflow: hidden;
+                right: 0px;
+            }
+            @include mq(desktop) {
+                display: none;
+            }
         }
     }
     &__mickey-hand--mobile {
@@ -152,8 +152,8 @@
             right: -2.3vw;
             top: -8.4rem;
         }
-         @include mq(desktop) {
-                 display: none;
+        @include mq(desktop) {
+            display: none;
         }
     }
     &__mickey-hand--desktop {
@@ -164,27 +164,25 @@
         height: 60px;
         width: 40px;
         z-index: 1;
-        rotate: 90deg;
         display: none;
-        
-                @include mq(tablet) {
-                    width: 60px;
-                    height: 50px;
-                     top: -5vw;
-                    right: 24%;
-                }
-                @include mq(desktop) {
-                    display: block;
-                    opacity: 1;
-                      top: 3.9rem;
-                    left: calc(33.5vw - 30px);
-                }
-                @include mq(wide) {
-                    top: 3.6rem;
-                    // left: calc(71% - 30px);
-                    left: calc(32vw - 30px);
-                }
 
+        @include mq(tablet) {
+            width: 60px;
+            height: 50px;
+            top: -5vw;
+            right: 24%;
+        }
+        @include mq(desktop) {
+            display: block;
+            opacity: 1;
+            top: 3.9rem;
+            left: calc(33.5vw - 30px);
+        }
+        @include mq(wide) {
+            top: 3.6rem;
+            // left: calc(71% - 30px);
+            left: calc(32vw - 30px);
+        }
     }
     &__title {
         display: block;
