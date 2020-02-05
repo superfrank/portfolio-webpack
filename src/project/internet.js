@@ -4,9 +4,9 @@ console.log("test");
 import inView from "in-view";
 import anime from "animejs";
 
-const mq = window.matchMedia( "(min-width: 980px)" );
+const mqDesktop = window.matchMedia( "(min-width: 980px)" );
 
-if (mq.matches) {
+if (mqDesktop.matches) {
     // window width is at least 500px
     anime({
         targets: ".svg__hand--desktop",

@@ -2,13 +2,16 @@ require("normalize.css/normalize.css");
 require("./styles/index.scss");
 import inView from "in-view";
 import anime from "animejs";
-import Marquee3k from "marquee3000";
+// import Marquee3k from "marquee3000";
 import imagesLoaded from "imagesloaded";
 import TweenMax from "./assets/TweenMax.min.js";
+// Marquee3k.init();
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("test");
 });
+
+const mq = window.matchMedia("(max-width: 980px)");
 
 anime({
     targets: ".featured-project__circle",
@@ -18,31 +21,32 @@ anime({
     loop: true
 });
 
-anime({
-    targets: ".featured-project__mickey-hand--mobile",
-    translateY: "-10px",
-    direction: "alternate",
-    duration: "500",
-    delay: 1500,
-    easing: "easeInOutSine",
-    loop: true
-});
-
-anime({
-    targets: ".featured-project__mickey-hand--desktop",
-    translateX: "1.6vw",
-    direction: "alternate",
-    duration: "500",
-    delay: 2000,
-    easing: "easeInOutSine",
-    loop: true
-});
+if (mq.matches) {
+    anime({
+        targets: ".featured-project__mickey-hand--mobile",
+        translateY: "-10px",
+        direction: "alternate",
+        duration: "500",
+        delay: 1500,
+        easing: "easeInOutSine",
+        loop: true
+    });
+} else {
+    anime({
+        targets: ".featured-project__mickey-hand--desktop",
+        translateX: "1.6vw",
+        direction: "alternate",
+        duration: "500",
+        delay: 2000,
+        easing: "easeInOutSine",
+        loop: true
+    });
+}
 
 inView(".animated-type h2")
     .on("enter", section => {
         // classList.add adds a class
         console.log("in-view");
-        Marquee3k.init();
         anime({
             targets: ".first",
             translateY: "8vw",

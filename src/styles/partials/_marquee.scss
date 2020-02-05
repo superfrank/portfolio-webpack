@@ -7,15 +7,15 @@
     }
 }
 
-.marquee3k__copy {
-    font-size: 40px;
+.fullblock__copy {
+    font-size: 90px;
 
     @include mq(desktop) {
         padding-right: 60vw;
     }
 }
 
-.marquee__list {
+.fullblock__list {
     display: flex;
     flex-direction: row;
     margin-right: 180px;
@@ -24,7 +24,7 @@
     }
 }
 
-.marquee__item {
+.fullblock__item {
     position: relative;
     margin-right: 5vw;
     // font-family: arial;
