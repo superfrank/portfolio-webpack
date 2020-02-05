@@ -18,6 +18,26 @@ anime({
     loop: true
 });
 
+anime({
+    targets: ".featured-project__mickey-hand--mobile",
+    translateY: "-10px",
+    direction: "alternate",
+    duration: "500",
+    delay: 1500,
+    easing: "easeInOutSine",
+    loop: true
+});
+
+anime({
+    targets: ".featured-project__mickey-hand--desktop",
+    translateX: "1.6vw",
+    direction: "alternate",
+    duration: "500",
+    delay: 2000,
+    easing: "easeInOutSine",
+    loop: true
+});
+
 inView(".animated-type h2")
     .on("enter", section => {
         // classList.add adds a class
