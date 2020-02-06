@@ -1,70 +1,102 @@
 .footer {
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid $black;
-  padding-top: 10px;
-  margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $black;
+    padding-top: 10px;
+    margin-bottom: 32px;
 
-  @include mq(tablet) {
-    border-top: 2px solid $black;
-    margin-bottom: 48px;
-  }
-
-  @include mq(wide) {
-    padding-top: 1%;
-    margin-bottom: 2.5%;
-  }
-
-  &__top{
-    &:hover {
-      svg path {
-        fill: $brand-1;
-        transition: fill 0.6s ease;
-      }
-
-      .footer__description {
-        color: $brand-1;
-        transition:color 0.6s ease;
-      }
-  }
-  }
-
-  &__arrow {
-    display: inline-block;
-    width: auto;
-    height: auto;
-
-    svg {
-      width: 2.5vw;
-      height: auto;
-
-      @include mq(desktop) {
-        width: 1vw;
-      }
-    }
-  }
-
-  &__description {
-    display: inline;
-    font-size: $font-size-five;
-    color: $black;
-    padding-left: 0.4rem;
-    line-height: 1;
-
-    @include mq(desktop) {
-      font-size: $font-size-two;
+    @include mq(tablet) {
+        border-top: 2px solid $black;
+        margin-bottom: 48px;
     }
 
-  }
+    @include mq(wide) {
+        padding-top: 1.5%;
+        margin-bottom: 2.5%;
+    }
+
+    &__top {
+        display: flex;
+        &:hover {
+            svg path {
+              transform-origin: center center;
+              animation: wiggle 1000ms ease-in-out;
+            }
+
+            .footer__description {
+                color: $brand-1;
+                transition: color 0.6s ease;
+            }
+        }
+    }
+
+    .mickey-hand {
+        margin-top: -1vw;
+        width: 7vw;
+
+        @include mq(desktop) {
+            margin-top: -0.4vw;
+            width: 2.5vw;
+        }
+
+        // svg  {
+        //   width: 1.5vw;
+        // }
+    }
+
+    &__arrow {
+        display: inline-block;
+        width: auto;
+        height: auto;
+
+        svg {
+            width: 2.5vw;
+            height: auto;
+
+            @include mq(desktop) {
+                width: 1vw;
+            }
+        }
+    }
+
+    &__description {
+        display: inline;
+        font-size: $font-size-five;
+        color: $black;
+        padding-left: 0.4rem;
+        line-height: 1;
+
+        @include mq(desktop) {
+            font-size: $font-size-two;
+        }
+    }
 }
 
 .footer__copyright {
-  font-size: $font-size-body;
-  color: $black;
-  font-size: $font-size-five;
-  line-height: 1;
+    font-size: $font-size-body;
+    color: $black;
+    font-size: $font-size-five;
+    line-height: 1;
 
-  @include mq(desktop) {
-    font-size: $font-size-two;
-  }
+    @include mq(desktop) {
+        font-size: $font-size-two;
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(5deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-2.5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
