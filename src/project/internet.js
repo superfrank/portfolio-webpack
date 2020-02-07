@@ -4,20 +4,30 @@ console.log("test");
 import inView from "in-view";
 import anime from "animejs";
 
-const mqDesktop = window.matchMedia( "(min-width: 980px)" );
+const mqTwo = window.matchMedia("(max-width: 980px)");
 
-if (mqDesktop.matches) {
+if (mqTwo.matches) {
     // window width is at least 500px
     anime({
+        targets: ".svg__hand--mobile",
+        translateY: "-1.6vw",
+        direction: "alternate",
+        duration: "500",
+        delay: 2000,
+        easing: "easeInOutSine",
+        loop: true
+    });
+
+} else {
+    anime({
         targets: ".svg__hand--desktop",
-        keyframes: [{ translateX: -20 }, { translateX: 0 }],
+        keyframes: [{ translateX: -18 }, { translateX: 0 }],
         delay: 3000,
         duration: 1500,
         easing: "spring(1, 80, 10, 0)",
         loop: true
     });
-    } else {
-    }
+}
 
 
 

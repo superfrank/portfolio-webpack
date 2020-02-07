@@ -5,6 +5,10 @@ p,
   font-size: $font-size-body;
   line-height: $line-height-body;
 
+  @include mq(mobileLandscape) {
+    font-size: 3.5vw;
+  }
+
   @include mq(desktop) {
     font-size: 1.5vw;
     margin-bottom: 1.5vw;

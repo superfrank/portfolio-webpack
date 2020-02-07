@@ -98,10 +98,10 @@
     }
     .caption {
         margin-bottom: 2.8rem;
-        display: block;
+        display: flex;
+        flex-flow: row wrap;
         .svg__hand--mobile {
-                display: inline;
-                margin-top: 1.5vw;
+            margin-top: 1vw;
             }
         .svg__hand--desktop {
             display: none;
@@ -109,51 +109,32 @@
 
         @include mq(desktop) {
             margin-bottom: 5vw;
+            align-self: flex-start;
+            padding-top: 1vw;
             .svg__hand--desktop {
-                display: inline;
+                display: flex;
             }
             .svg__hand--mobile {
                 display: none;
             }
         }
         svg {
-            width: auto;
-            height: 4vw;
-            transform: rotate(90deg);
+            width: 3.5vw;
+            height: auto;
             display: inline;
+            margin-right: 1vw;
+            
 
             @include mq(desktop) {
-                transform: rotate(0deg);
-                height: 3vw;
+                margin-top: -1vw;
             }
         }
         &__header {
-            display: inline;
             color: $brand-1;
         }
         &__body {
+            width: 100%;
             display: block;
         }
-    }
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    15% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 1;
-    }
-    85% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
     }
 }
