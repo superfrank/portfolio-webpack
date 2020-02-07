@@ -1,233 +1,313 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Frank Hulley-Jones</title>
-  </head>
 
-  <header class="logo logo-article">
-        <a class="logo__link" href="index.html">
-          <svg
-            class="logo-image"
-            xmlns="http://www.w3.org/2000/svg"
-            width="316"
-            height="128"
-            viewBox="0 0 316 128"
-          >
-            <path
-              class="logo__frame"
-              fill="#333"
-              d="M306 22h-19.7C274.5 8.5 257.3 0 238 0c-19.2 0-36.4 8.5-48.1 21.8C182.1 14.5 170.6 10 158 10c-12.6 0-24.1 4.5-31.9 11.8C114.4 8.5 97.2 0 78 0 58.7 0 41.5 8.5 29.7 22H10C4.5 22 0 26.5 0 32s4.5 10 10 10h7.9C15.4 48.9 14 56.3 14 64c0 35.3 28.7 64 64 64s64-28.7 64-64c0-8.6-1.7-16.8-4.8-24.3C140 34.6 147.8 30 158 30s18 4.6 20.8 9.7c-3.1 7.5-4.8 15.7-4.8 24.3 0 35.3 28.7 64 64 64s64-28.7 64-64c0-7.7-1.4-15.1-3.9-22h7.9c5.5 0 10-4.5 10-10s-4.5-10-10-10zM78 108c-24.3 0-44-19.7-44-44s19.7-44 44-44 44 19.7 44 44-19.7 44-44 44zm160 0c-24.3 0-44-19.7-44-44s19.7-44 44-44 44 19.7 44 44-19.7 44-44 44z"
-            />
-            <g class="logo__eyes" fill="#333">
-              <circle cx="238" cy="64" r="12" />
-              <circle cx="78" cy="64" r="12" />
-            </g>
-          </svg>
-        </a>
-  </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frank Hulley-Jones</title>
+</head>
 
-  <body>
-    <div id="one-page">
-      <div class="article">
-          <div class="header">
-              <div class="header-container">
-                  <img class="header-image__mobile mobile" src="<%= require('../../src/assets/internet/header-image-background__mobile.png') %>"/>
-                  <img class="header-image__desktop desktop" src="<%= require('../../src/assets/internet/header-image-background__desktop.png') %>"/>
-                  <img class="gif gif__one" src="<%= require('../../src/assets/internet/shifty-eyes-slow.gif') %>"/>
-                  <img class="gif gif__two" src="<%= require('../../src/assets/internet/hourglass.gif') %>"/>
-                  <img class="gif gif__three" src="<%= require('../../src/assets/internet/clippy.gif') %>"/>
-                  <img class="gif gif__four desktop" src="<%= require('../../src/assets/internet/ellipsis.gif') %>"/>
-                  <img class="gif gif__five desktop" src="<%= require('../../src/assets/internet/thumbs-up.gif') %>"/>
-                  <img class="gif gif__six desktop" src="<%= require('../../src/assets/internet/globe-folder-slow.gif') %>"/>
-                  <img class="gif gif__seven desktop" src="<%= require('../../src/assets/internet/loading-bar.gif') %>"/>
-              </div>
+<header class="logo logo-article">
+  <a class="logo__link--internet" href="index.html">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 316 128"
+      xml:space="preserve">
+      <style>
+        .eye-white {
+          fill: #fff
+        }
+      </style>
+      <circle class="eye-white" cx="238" cy="64" r="44" />
+      <circle class="eye-white" cx="78" cy="64" r="44" />
+      <path id="frames"
+        d="M306 22h-19.7C274.5 8.5 257.3 0 238 0c-19.2 0-36.4 8.5-48.1 21.8C182.1 14.5 170.6 10 158 10s-24.1 4.5-31.9 11.8C114.4 8.5 97.2 0 78 0 58.7 0 41.5 8.5 29.7 22H10C4.5 22 0 26.5 0 32s4.5 10 10 10h7.9C15.4 48.9 14 56.3 14 64c0 35.3 28.7 64 64 64s64-28.7 64-64c0-8.6-1.7-16.8-4.8-24.3C140 34.6 147.8 30 158 30s18 4.6 20.8 9.7c-3.1 7.5-4.8 15.7-4.8 24.3 0 35.3 28.7 64 64 64s64-28.7 64-64c0-7.7-1.4-15.1-3.9-22h7.9c5.5 0 10-4.5 10-10s-4.5-10-10-10zM78 108c-24.3 0-44-19.7-44-44s19.7-44 44-44 44 19.7 44 44-19.7 44-44 44zm160 0c-24.3 0-44-19.7-44-44s19.7-44 44-44 44 19.7 44 44-19.7 44-44 44z"
+        fill="#121212" />
+      <g>
+        <path id="eye-1" d="M236 60l20-4s4 32-16 32c0 0-20 0-20-24 0 0-4.2-30.4 24-24l-8 20z" />
+      </g>
+      <g>
+        <path id="eye-2" d="M76 60l20-4s4 32-16 32c0 0-20 0-20-24 0 0-4.2-30.4 24-24l-8 20z" />
+      </g>
+    </svg>
+  </a>
+</header>
+
+<body>
+  <div id="one-page">
+    <div class="article">
+      <div class="header">
+        <div class="header-container">
+          <img class="header-image__mobile mobile"
+            src="<%= require('../../src/assets/internet/header-image-background__mobile.png') %>" />
+          <img class="header-image__desktop desktop"
+            src="<%= require('../../src/assets/internet/header-image-background__desktop.png') %>" />
+          <img class="gif gif__one" src="<%= require('../../src/assets/internet/shifty-eyes-slow.gif') %>" />
+          <img class="gif gif__two" src="<%= require('../../src/assets/internet/hourglass.gif') %>" />
+          <img class="gif gif__three" src="<%= require('../../src/assets/internet/clippy.gif') %>" />
+          <img class="gif gif__four desktop" src="<%= require('../../src/assets/internet/ellipsis.gif') %>" />
+          <img class="gif gif__five desktop" src="<%= require('../../src/assets/internet/thumbs-up.gif') %>" />
+          <img class="gif gif__six desktop" src="<%= require('../../src/assets/internet/globe-folder-slow.gif') %>" />
+          <img class="gif gif__seven desktop" src="<%= require('../../src/assets/internet/loading-bar.gif') %>" />
+        </div>
+      </div>
+      <div class="introduction wrapper">
+        <div class="item grid">
+          <div class="information grid__2-3">
+            <div class="information__type">
+              <div class="information__meta">Type: </div>
+              <div class="information__data">Interactive</div>
             </div>
-          <div class="introduction wrapper">
-            <div class="item grid">
-              <div class="information grid__2-3">
-                <div class="information__type">
-                  <div class="information__meta">Type: </div><div class="information__data">Interactive</div>
-                </div>
-                <div class="information__year">
-                  <div class="information__meta">Year: </div><div class="information__data">2019</div>
-                </div>
-                <div class="information__role">
-                  <div class="information__meta">Role: </div><div class="information__data">Art Direction, Design, Illustration, Front-end</div>
-                </div>
-                <div class="information__link mobile"><a class="headline__link" href="https://gu.com/p/a2438"><span><svg class="svg__arrow--link" width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.707 8.707a1 1 0 000-1.414L17.343.929a1 1 0 10-1.414 1.414L21.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h23V7H0v2z" fill="#803025"/></svg></span>Live article</a></div>
-              </div>
-                <h1 class="headline grid__1-3">The internet but not as we know it<a class="headline__link" href="https://gu.com/p/a2438"><span><svg class="svg__arrow--link" width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.707 8.707a1 1 0 000-1.414L17.343.929a1 1 0 10-1.414 1.414L21.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h23V7H0v2z" fill="#803025"/></svg></span>Live article</a></h1>
-                <h3 class="standfirst grid__2-3">
-                  At the end of 2018 more than half of the world's population went online. Tim Berners-Lee raised a glass, whilst I spent 8 weeks trying to comprehend Chinese microblogs and piece together an article with some 90s nostalgia.
-                </h3>
-                <h3 class="standfirst grid__2-3">
-                  The brief for the project was: “What’s life look like online in India, Cuba, China and Russia?” The tricky part was creating something that looked and functioned in a cohesive way, whilst remaining true to each nation.
-                </h3>
-                <h3 class="standfirst grid__2-3">
-                  I presented two routes:<br>
-                1. A safe option with illustrations of each country<br>
-                2. A wild design packed full of animations  
-                  
-                <h3 class="standfirst grid__2-3">
-                  The editor’s feedback was: “We want it to be as sexy and maverick as possible.” 
-                </h3>
-                <h3 class="standfirst grid__2-3">
-                  Taking this as a green light for option 2, we set to work; starting with India.
-                </h3>
+            <div class="information__year">
+              <div class="information__meta">Year: </div>
+              <div class="information__data">2019</div>
+            </div>
+            <div class="information__role">
+              <div class="information__meta">Role: </div>
+              <div class="information__data">Art Direction, Design, Illustration, Front-end</div>
+            </div>
+            <div class="information__link mobile"><a class="headline__link" href="https://gu.com/p/a2438"><span><svg
+                    class="svg__arrow--link" width="24" height="16" viewBox="0 0 24 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M23.707 8.707a1 1 0 000-1.414L17.343.929a1 1 0 10-1.414 1.414L21.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h23V7H0v2z"
+                      fill="#803025" /></svg></span>Live article</a></div>
+          </div>
+          <h1 class="headline grid__1-3">The internet but not as we know it<a class="headline__link"
+              href="https://gu.com/p/a2438"><span><svg class="svg__arrow--link" width="24" height="16"
+                  viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M23.707 8.707a1 1 0 000-1.414L17.343.929a1 1 0 10-1.414 1.414L21.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h23V7H0v2z"
+                    fill="#803025" /></svg></span>Live article</a></h1>
+          <h3 class="standfirst grid__2-3">
+            At the end of 2018 more than half of the world's population went online. Tim Berners-Lee raised a glass,
+            whilst I spent 8 weeks trying to comprehend Chinese microblogs and piece together an article with some 90s
+            nostalgia.
+          </h3>
+          <h3 class="standfirst grid__2-3">
+            The brief for the project was: “What’s life look like online in India, Cuba, China and Russia?” The tricky
+            part was creating something that looked and functioned in a cohesive way, whilst remaining true to each
+            nation.
+          </h3>
+          <h3 class="standfirst grid__2-3">
+            I presented two routes:<br>
+            1. A safe option with illustrations of each country<br>
+            2. A wild design packed full of animations
+
+            <h3 class="standfirst grid__2-3">
+              The editor’s feedback was: “We want it to be as sexy and maverick as possible.”
+            </h3>
+            <h3 class="standfirst grid__2-3">
+              Taking this as a green light for option 2, we set to work; starting with India.
+            </h3>
+        </div>
+      </div>
+      <div class="content wrapper">
+        <div class="grid item">
+          <div class="image grid__1-4 image__background">
+            <div class="image__container">
+              <video class="image__floating video" preload="auto" playsinline="" autoplay="" loop="" muted=""
+                autobuffer="false" poster="<%= require('../../src/assets/internet/media/poster-internet-india.png') %>">
+                <source src="<%= require('../../src/assets/internet/media/internet-india.mp4') %>" type="video/mp4">
+                <source src="<%= require('../../src/assets/internet/media/internet-india.webm') %>" type="video/webm">
+              </video>
             </div>
           </div>
-          <div class="content wrapper">
-            <div class="grid item">
-              <div class="image grid__1-4 image__background">
-                <div class="image__container">
-                  <video class="image__floating video" preload="auto" playsinline="" autoplay="" loop="" muted="" autobuffer="false" poster="<%= require('../../src/assets/internet/media/poster-internet-india.png') %>">
-                    <source src="<%= require('../../src/assets/internet/media/internet-india.mp4') %>" type="video/mp4">
-                    <source src="<%= require('../../src/assets/internet/media/internet-india.webm') %>" type="video/webm">
-                  </video>
-                </div>
-              </div>
+        </div>
+        <div class="grid item">
+          <div class="text grid__1-3">
+            <h2 class="text__header grid__1-1">India</h2>
+            <p class="text__body grid__2-3">Has over 200 million users of WhatsApp and more than 50% of people are
+              functionally illiterate, so communication through audio, images and emojis is key. Rumours are shared
+              regularly through chat groups, leading to a lot of “fake news” being believed.
+            </p>
+            <p class="text__body grid__2-3">
+              This was the perfect place to start, as using mobile chat messages as a device let readers know this isn’t
+              a regular news article and started them scrolling.
+            </p>
+          </div>
+        </div>
+        <div class="grid item">
+          <div class="image image__caption grid__2-3">
+            <div class="image__inline">
+              <img class="image__two" src="<%= require('../../src/assets/internet/article/image-2.png') %>" />
             </div>
-            <div class="grid item">
-              <div class="text grid__1-3">
-                <h2 class="text__header grid__1-1">India</h2>
-                <p class="text__body grid__2-3">Has over 200 million users of WhatsApp and more than 50% of people are functionally illiterate, so communication through audio, images and emojis is key. Rumours are shared regularly through chat groups, leading to a lot of “fake news” being believed. 
-                </p>
-                <p class="text__body grid__2-3">
-                  This was the perfect place to start, as using mobile chat messages as a device let readers know this isn’t a regular news article and started them scrolling.
-                </p>
-              </div>
+          </div>
+          <p class="text__body caption grid__4-4">
+            <svg class="svg__hand--desktop desktop" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 40.2 31.1">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: none;
+                    stroke: #ff6c6a;
+                    stroke-miterlimit: 10;
+                    stroke-width: 2px;
+                  }
+                </style>
+              </defs>
+              <title>vector-hand</title>
+              <path class="cls-1"
+                d="M24,1a2.82,2.82,0,0,0-2.2,1.08A3.34,3.34,0,0,0,21,4.2a2.81,2.81,0,0,0,.85,2.05l4.21,4a.3.3,0,0,1,.08.21.36.36,0,0,1-.24.13H3.7a2.46,2.46,0,1,0,0,4.9H17.3a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H15.4a2.72,2.72,0,0,0-2.7,2.9,2.41,2.41,0,0,0,2.4,2.4h2.7a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H16.6a2.4,2.4,0,0,0,0,4.8h3.1a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H18.12a1,1,0,0,0-.92.6,2,2,0,0,0-.2.8,1.88,1.88,0,0,0,1.9,1.9c.12,0,11.85-.07,14.62-1.46,3-1.39,5.68-3.11,5.68-8.74,0-5.41-2.8-8.21-6-11.46l-.61-.6c-3-2.9-5.36-5-6.13-5.76l-.28-.25-.07-.07A3.32,3.32,0,0,0,24,1Z" />
+            </svg>
+            <svg class="svg__hand--mobile mobile" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 40.2 31.1">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: none;
+                    stroke: #ff6c6a;
+                    stroke-miterlimit: 10;
+                    stroke-width: 2px;
+                  }
+                </style>
+              </defs>
+              <title>vector-hand</title>
+              <path class="cls-1"
+                d="M24,1a2.82,2.82,0,0,0-2.2,1.08A3.34,3.34,0,0,0,21,4.2a2.81,2.81,0,0,0,.85,2.05l4.21,4a.3.3,0,0,1,.08.21.36.36,0,0,1-.24.13H3.7a2.46,2.46,0,1,0,0,4.9H17.3a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H15.4a2.72,2.72,0,0,0-2.7,2.9,2.41,2.41,0,0,0,2.4,2.4h2.7a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H16.6a2.4,2.4,0,0,0,0,4.8h3.1a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H18.12a1,1,0,0,0-.92.6,2,2,0,0,0-.2.8,1.88,1.88,0,0,0,1.9,1.9c.12,0,11.85-.07,14.62-1.46,3-1.39,5.68-3.11,5.68-8.74,0-5.41-2.8-8.21-6-11.46l-.61-.6c-3-2.9-5.36-5-6.13-5.76l-.28-.25-.07-.07A3.32,3.32,0,0,0,24,1Z" />
+            </svg>
+            <span class="caption__header">Extra touch</span><span class="caption__body">The time of the messages are at
+              your computer's time</span></p>
+        </div>
+        <div class="grid item">
+          <div class="image grid__1-4 image__background">
+            <div class="image__container">
+              <video class="image__floating video" preload="auto" playsinline="" autoplay="" loop="" muted=""
+                autobuffer="false" poster="<%= require('../../src/assets/internet/media/poster-internet-china.png') %>">
+                <source src="<%= require('../../src/assets/internet/media/internet-china.mp4') %>" type="video/mp4">
+                <source src="<%= require('../../src/assets/internet/media/internet-china.webm') %>" type="video/webm">
+              </video>
             </div>
-            <div class="grid item">
-              <div class="image image__caption grid__2-3">
-                <div class="image__inline">
-                  <img class="image__two" src="<%= require('../../src/assets/internet/article/image-2.png') %>"/>
-                </div>
-              </div>
-                <p class="text__body caption grid__4-4">
-                  <svg class="svg__hand--desktop desktop" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.2 31.1"><defs><style>.cls-1{fill:none;stroke:#ff6c6a;stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>vector-hand</title><path class="cls-1" d="M24,1a2.82,2.82,0,0,0-2.2,1.08A3.34,3.34,0,0,0,21,4.2a2.81,2.81,0,0,0,.85,2.05l4.21,4a.3.3,0,0,1,.08.21.36.36,0,0,1-.24.13H3.7a2.46,2.46,0,1,0,0,4.9H17.3a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H15.4a2.72,2.72,0,0,0-2.7,2.9,2.41,2.41,0,0,0,2.4,2.4h2.7a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H16.6a2.4,2.4,0,0,0,0,4.8h3.1a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H18.12a1,1,0,0,0-.92.6,2,2,0,0,0-.2.8,1.88,1.88,0,0,0,1.9,1.9c.12,0,11.85-.07,14.62-1.46,3-1.39,5.68-3.11,5.68-8.74,0-5.41-2.8-8.21-6-11.46l-.61-.6c-3-2.9-5.36-5-6.13-5.76l-.28-.25-.07-.07A3.32,3.32,0,0,0,24,1Z"/></svg>
-                  <svg class="svg__hand--mobile mobile" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.2 31.1"><defs><style>.cls-1{fill:none;stroke:#ff6c6a;stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>vector-hand</title><path class="cls-1" d="M24,1a2.82,2.82,0,0,0-2.2,1.08A3.34,3.34,0,0,0,21,4.2a2.81,2.81,0,0,0,.85,2.05l4.21,4a.3.3,0,0,1,.08.21.36.36,0,0,1-.24.13H3.7a2.46,2.46,0,1,0,0,4.9H17.3a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H15.4a2.72,2.72,0,0,0-2.7,2.9,2.41,2.41,0,0,0,2.4,2.4h2.7a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H16.6a2.4,2.4,0,0,0,0,4.8h3.1a.18.18,0,0,1,.2.2.19.19,0,0,1-.2.2H18.12a1,1,0,0,0-.92.6,2,2,0,0,0-.2.8,1.88,1.88,0,0,0,1.9,1.9c.12,0,11.85-.07,14.62-1.46,3-1.39,5.68-3.11,5.68-8.74,0-5.41-2.8-8.21-6-11.46l-.61-.6c-3-2.9-5.36-5-6.13-5.76l-.28-.25-.07-.07A3.32,3.32,0,0,0,24,1Z"/></svg>
-                  <span class="caption__header">Extra touch</span><span class="caption__body">The time of the messages are at your computer's time</span></p>
+          </div>
+        </div>
+        <div class="grid item">
+          <div class="image image__mini grid__2-2">
+            <div class="image__inline">
+              <video class="video" preload="auto" playsinline="" autoplay="" loop="" muted="" autobuffer="false"
+                poster="<%= require('../../src/assets/internet/media/poster-internet-china-3.png') %>">
+                <source src="<%= require('../../src/assets/internet/media/internet-china-3.mp4') %>" type="video/mp4">
+                <source src="<%= require('../../src/assets/internet/media/internet-china-3.webm') %>" type="video/webm">
+              </video>
             </div>
-            <div class="grid item">
-              <div class="image grid__1-4 image__background">
-                <div class="image__container">
-                  <video class="image__floating video" preload="auto" playsinline="" autoplay="" loop="" muted="" autobuffer="false" poster="<%= require('../../src/assets/internet/media/poster-internet-china.png') %>">
-                    <source src="<%= require('../../src/assets/internet/media/internet-china.mp4') %>" type="video/mp4">
-                    <source src="<%= require('../../src/assets/internet/media/internet-china.webm') %>" type="video/webm">
-                  </video>
-                </div>
-              </div>
+          </div>
+          <div class="image grid__3-4 image__background">
+            <div class="image__container image__container__mobile">
+              <video class="image__floating image__floating__mobile video" preload="auto" playsinline="" autoplay=""
+                loop="" muted="" autobuffer="false"
+                poster="<%= require('../../src/assets/internet/media/poster-internet-china-2.png') %>">
+                <source src="<%= require('../../src/assets/internet/media/internet-china-2.mp4') %>" type="video/mp4">
+                <source src="<%= require('../../src/assets/internet/media/internet-china-2.webm') %>" type="video/webm">
+              </video>
             </div>
-            <div class="grid item">
-              <div class="image image__mini grid__2-2">
-                <div class="image__inline">
-                  <video class="video" preload="auto" playsinline="" autoplay="" loop="" muted="" autobuffer="false" poster="<%= require('../../src/assets/internet/media/poster-internet-china-3.png') %>">
-                    <source src="<%= require('../../src/assets/internet/media/internet-china-3.mp4') %>" type="video/mp4">
-                    <source src="<%= require('../../src/assets/internet/media/internet-china-3.webm') %>" type="video/webm">
-                  </video >
-                </div>
-              </div>
-              <div class="image grid__3-4 image__background">
-                <div class="image__container image__container__mobile">
-                  <video class="image__floating image__floating__mobile video" preload="auto" playsinline="" autoplay="" loop="" muted="" autobuffer="false" poster="<%= require('../../src/assets/internet/media/poster-internet-china-2.png') %>">
-                    <source src="<%= require('../../src/assets/internet/media/internet-china-2.mp4') %>" type="video/mp4">
-                    <source src="<%= require('../../src/assets/internet/media/internet-china-2.webm') %>" type="video/webm">
-                  </video>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="grid item">
+          <div class="text grid__1-3">
+            <h2 class="text__header grid__1-1">China</h2>
+            <p class="text__body grid__2-3">In China, Google, Facebook, Twitter and the majority of Western media is
+              blocked but the locals don't mind because of the Chinese alternatives.
+            </p>
+            <p class="text__body grid__2-3">
+              I wanted this section to be crammed full of exaggerated animations as a reference to Weibo (a popular
+              microblog). The blinking pull quote is a nod to neon signs found in cities like Beijing.
+            </p>
+          </div>
+        </div>
+        <div class="grid item">
+          <div class="image grid__1-4 image__background">
+            <div class="image__container">
+              <video class="image__floating video" preload="auto" playsinline="" autoplay="" loop="" muted=""
+                autobuffer="false" poster="<%= require('../../src/assets/internet/media/poster-internet-cuba.png') %>">
+                <source src="<%= require('../../src/assets/internet/media/internet-cuba.mp4') %>" type="video/mp4">
+                <source src="<%= require('../../src/assets/internet/media/internet-cuba.webm') %>" type="video/webm">
+              </video>
             </div>
-            <div class="grid item">
-              <div class="text grid__1-3">
-                <h2 class="text__header grid__1-1">China</h2>
-                <p class="text__body grid__2-3">In China, Google, Facebook, Twitter and the majority of Western media is blocked but the locals don't mind because of the Chinese alternatives. 
-                </p>
-                <p class="text__body grid__2-3">
-                  I wanted this section to be crammed full of exaggerated animations as a reference to Weibo (a popular microblog). The blinking pull quote is a nod to neon signs found in cities like Beijing.
-                </p>
-              </div>
+          </div>
+        </div>
+        <div class="grid item">
+          <div class="text grid__1-3">
+            <h2 class="text__header grid__1-1">Cuba</h2>
+            <p class="text__body grid__2-3">Across the pond in Cuba — access to the internet is limited and expensive.
+              Locals receive delivery of media through an external hard drive known as “The Weekly Packet”.
+            </p>
+            <p class="text__body grid__2-3">This was where the idea for pixelated design came from; as screenshots of
+              The Weekly Packet showed it running on an old version of Windows. The design heavily leans on how Windows
+              3.11 looked and functioned.
+            </p>
+          </div>
+        </div>
+        <div class="grid item">
+          <div class="image grid__1-4 image__background">
+            <div class="image__container">
+              <video class="image__floating video" preload="auto" playsinline="" autoplay="" loop="" muted=""
+                autobuffer="false"
+                poster="<%= require('../../src/assets/internet/media/poster-internet-russia.png') %>">
+                <source src="<%= require('../../src/assets/internet/media/internet-russia.mp4') %>" type="video/mp4">
+                <source src="<%= require('../../src/assets/internet/media/internet-russia.webm') %>" type="video/webm">
+              </video>
             </div>
-            <div class="grid item">
-              <div class="image grid__1-4 image__background">
-                <div class="image__container">
-                  <video class="image__floating video" preload="auto" playsinline="" autoplay="" loop="" muted="" autobuffer="false" poster="<%= require('../../src/assets/internet/media/poster-internet-cuba.png') %>">
-                    <source src="<%= require('../../src/assets/internet/media/internet-cuba.mp4') %>" type="video/mp4">
-                    <source src="<%= require('../../src/assets/internet/media/internet-cuba.webm') %>" type="video/webm">
-                  </video>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="grid item">
+          <div class="image grid__1-2 image__background">
+            <div class="image__container image__container__mobile">
+              <img class="image__floating image__floating__mobile"
+                src="<%= require('../../src/assets/internet/article/internet-russia-2.png') %>" />
             </div>
-            <div class="grid item">
-              <div class="text grid__1-3">
-              <h2 class="text__header grid__1-1">Cuba</h2>
-              <p class="text__body grid__2-3">Across the pond in Cuba — access to the internet is limited and expensive. Locals receive delivery of media through an external hard drive known as “The Weekly Packet”.
-              </p>
-              <p class="text__body grid__2-3">This was where the idea for pixelated design came from; as screenshots of The Weekly Packet showed it running on an old version of Windows. The design heavily leans on how Windows 3.11 looked and functioned.
-              </p>
-              </div>
+          </div>
+          <div class="image image__mini grid__3-3 align-end">
+            <div class="image__inline">
+              <img class="image__seven" src="<%= require('../../src/assets/internet/article/russia-eye-3.gif') %>" />
             </div>
-            <div class="grid item">
-              <div class="image grid__1-4 image__background">
-                <div class="image__container">
-                  <video class="image__floating video" preload="auto" playsinline="" autoplay="" loop="" muted="" autobuffer="false" poster="<%= require('../../src/assets/internet/media/poster-internet-russia.png') %>">
-                    <source src="<%= require('../../src/assets/internet/media/internet-russia.mp4') %>" type="video/mp4">
-                    <source src="<%= require('../../src/assets/internet/media/internet-russia.webm') %>" type="video/webm">
-                  </video>
-                </div>
-              </div>
+          </div>
+          <div class="image image__mini grid__4-4">
+            <div class="image__inline">
+              <img class="image__seven" src="<%= require('../../src/assets/internet/article/russia-eye-2.gif') %>" />
             </div>
-            <div class="grid item">
-              <div class="image grid__1-2 image__background">
-                <div class="image__container image__container__mobile">
-                  <img class="image__floating image__floating__mobile" src="<%= require('../../src/assets/internet/article/internet-russia-2.png') %>"/>
-                </div>
-              </div>
-              <div class="image image__mini grid__3-3 align-end">
-                <div class="image__inline">
-                  <img class="image__seven" src="<%= require('../../src/assets/internet/article/russia-eye-3.gif') %>"/>
-                </div>
-              </div>
-              <div class="image image__mini grid__4-4">
-                <div class="image__inline">
-                  <img class="image__seven" src="<%= require('../../src/assets/internet/article/russia-eye-2.gif') %>"/>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="grid item">
+          <div class="text grid__1-3">
+            <h2 class="text__header grid__1-1">Russia</h2>
+            <p class="text__body grid__2-3">Meanwhile in Russia, the Government promotes local companies such as mail.ru
+              and VK (a Facebook clone). The state’s relationship with VK is controversial; A handful of users were
+              charged with extremism after police searched their online accounts for political content.
+            </p>
+            <p class="text__body grid__2-3">Heavily referencing Facebook, this section has little touches like being
+              able to like each post, add The Kremlin as a possible friend and eyes always subtly watching.
+            </p>
+          </div>
+        </div>
+        <div class="grid item">
+          <div class="text grid__1-3">
+            <h2 class="text__header grid__1-1">Outcome</h2>
+            <p class="text__body grid__2-3">Overall, the article did really well. The project went on to win a <a
+                href="https://www.dandad.org/awards/professional/2019/graphic-design/231385/the-guardian-the-internet-but-not-as-we-know-it/">D&AD
+                Wooden Pencil, 2019</a> and was featured in <a
+                href="https://www.creativereview.co.uk/the-guardian-brings-the-worlds-internet-use-to-life-in-animated-feature/">Creative
+                Review.</a></p>
+            <p class="text__body grid__2-3">The part I'm particularly proud of is the viewing time of the article is
+              twice as long as a regular interactive. I'd hope it's because the piece is so visual, people enjoyed
+              scrolling to the very end.
+            </p>
+          </div>
+          <p class="text__body grid__2-3"><span class="caption__header">Page views over 24 hours</span>
+          </p>
+          <div class="image grid__2-3">
+            <div class="image__inline">
+              <img class="image__eight" src="<%= require('../../src/assets/internet/article/data-1.png') %>" />
             </div>
-            <div class="grid item">
-              <div class="text grid__1-3">
-                <h2 class="text__header grid__1-1">Russia</h2>
-                <p class="text__body grid__2-3">Meanwhile in Russia, the Government promotes local companies such as mail.ru and VK (a Facebook clone). The state’s relationship with VK is controversial; A handful of users were charged with extremism after police searched their online accounts for political content.
-                </p>
-                <p class="text__body grid__2-3">Heavily referencing Facebook, this section has little touches like being able to like each post, add The Kremlin as a possible friend and eyes always subtly watching.
-                </p>
-              </div>
+          </div>
+          <p class="text__body grid__2-3"><span class="caption__header">Median attention time over 24 hours</span>
+          </p>
+          <div class="image grid__2-3">
+            <div class="image__inline">
+              <img class="image__eight" src="<%= require('../../src/assets/internet/article/data-2.png') %>" />
             </div>
-            <div class="grid item">
-              <div class="text grid__1-3">
-              <h2 class="text__header grid__1-1">Outcome</h2>
-                <p class="text__body grid__2-3">Overall, the article did really well. The project went on to win a <a href="https://www.dandad.org/awards/professional/2019/graphic-design/231385/the-guardian-the-internet-but-not-as-we-know-it/">D&AD Wooden Pencil, 2019</a> and was featured in <a href="https://www.creativereview.co.uk/the-guardian-brings-the-worlds-internet-use-to-life-in-animated-feature/">Creative Review.</a></p>
-                <p class="text__body grid__2-3">The part I'm particularly proud of is the viewing time of the article is twice as long as a regular interactive. I'd hope it's because the piece is so visual, people enjoyed scrolling to the very end.
-                </p>
-              </div>
-              <p class="text__body grid__2-3"><span class="caption__header">Page views over 24 hours</span>
-              </p>
-                <div class="image grid__2-3">
-                  <div class="image__inline">
-                    <img class="image__eight" src="<%= require('../../src/assets/internet/article/data-1.png') %>"/>
-                  </div>
-                </div>
-              <p class="text__body grid__2-3"><span class="caption__header">Median attention time over 24 hours</span>
-              </p>
-              <div class="image grid__2-3">
-                <div class="image__inline">
-                  <img class="image__eight" src="<%= require('../../src/assets/internet/article/data-2.png') %>"/>
-                </div>
-              </div>
-            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  </body>
+  </div>
+</body>
+
 </html>
