@@ -52,8 +52,14 @@
     }
 
     &__number {
-        text-align: right;
+        // text-align: right;
+        position: relative;
+        display: inline-block;
         color: grey;
+        width: 5vw;
+        @include mq(desktop) {
+            width: 2.5vw;
+        }
     }
 
     &__link {

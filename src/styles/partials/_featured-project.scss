@@ -102,13 +102,17 @@
             width: 10rem;
             svg {
                 height: auto;
-                width: 10rem;
+                width: auto;
             }
             @include mq(desktop) {
                 right: 6rem;
             }
             @include mq(wide) {
-                right: 10rem;
+                right: 12%;
+                height: 14rem;
+                width: 14rem;
+                bottom: -64px;
+               
             }
         }
 
