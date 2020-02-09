@@ -5,14 +5,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-const buildPath = path.resolve(__dirname, "dist");
+const buildPath = path.resolve(__dirname, "public_html");
 
 module.exports = {
     devtool: "source-map",
     entry: {
-        tweenmax: "./src/assets/TweenMax.min.js",
         index: "./src/index.js",
-        internet: "./src/project/internet.js"
+        internet: "./src/project/internet.js",
+        tweenmax: "./src/assets/TweenMax.min.js"
     },
     output: {
         filename: "[name].[hash:20].js",

@@ -8,7 +8,7 @@ import TweenMax from "./assets/TweenMax.min.js";
 // Marquee3k.init();
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("test");
+    console.log("page-loaded");
 });
 
 const mq = window.matchMedia("(max-width: 980px)");
