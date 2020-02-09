@@ -147,6 +147,7 @@
     background-color: #e55744;
     padding-top: 1rem;
     padding-bottom: 4.8rem;
+    overflow: hidden;
     @include mq(desktop) {
         padding-top: 2.5vh;
         padding-bottom: 10vh;
@@ -207,18 +208,20 @@ h3 {
     font-size: $font-size-ten;
     color: white;
     line-height: 1;
-    margin-bottom: 2vw;
+    margin-bottom: 1rem;
+    margin-top: 7vw;
 
     @include mq(desktop) {
         font-size: $font-size-eight;
-        margin-top: 1vw;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
     }
 
     &__link {
         display: none;
         @include mq(desktop) {
             display: inline;
-            font-size: $font-size-one;
+            font-size: 1.3vw;
             margin-left: 1vw;
         }
         color: white;
@@ -282,32 +285,35 @@ h3 {
 
 .information {
     display: block;
-    position: relative;
-    grid-row: 2;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
     font-size: 4vw;
-    line-height: 1;
+    line-height: 1.5;
+    overflow: hidden;
+    white-space: nowrap;
 
     @include mq(desktop) {
         font-size: 1.5vw;
-    }
-
-    @include mq(desktop) {
-        grid-row: 1;
+        margin-top: -0.5vw;
     }
 
     &__type,
+    &__client,
     &__year,
     &__role,
+    &__award,
     &__link {
-        display: inline-block;
+        display: inline;
         color: white;
-        margin-right: 1.5vw;
+        margin-right: 5vw;
     }
 
     &__role {
-        display: inline-block;
+        display: inline;
         margin-top: 1rem;
-        margin-right: 0;
+        // margin-right: 0;
 
         @include mq(desktop) {
             margin-top: 0rem;
@@ -316,7 +322,8 @@ h3 {
 
     &__link {
         margin-top: 1rem;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
+        font-size: 5vw;
 
         .headline__link {
             display: block;
@@ -328,7 +335,7 @@ h3 {
         color: white;
 
         @include mq(desktop) {
-            font-size: 1vw;
+            font-size: 2vw;
         }
     }
 
@@ -336,7 +343,33 @@ h3 {
         display: inline;
         color: #803025;
         @include mq(desktop) {
-            font-size: 1vw;
+            font-size: 2vw;
         }
+    }
+}
+
+.marquee-move {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0px;
+    animation: moveAcross 20s infinite linear;
+    @include mq(desktop) {
+        animation: moveAcross 40s infinite linear;
+    }
+}
+
+.marquee-move:first-of-type {
+    margin-right: -0.76vw;
+    @include mq(desktop) {
+        margin-right: -0.4vw;
+    }
+}
+
+@keyframes moveAcross {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
