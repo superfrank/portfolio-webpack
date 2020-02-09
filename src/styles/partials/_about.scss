@@ -2,7 +2,10 @@
   // margin: 0;
   text-align: left;
   display: block;
-  margin-bottom: 15vh;
+  margin-bottom: 20vw;
+  @include mq(desktop) {
+    margin-bottom: 5vw;
+  }
 
   &__header {
     font-size: $font-size-ten;

@@ -257,6 +257,32 @@
     }
 }
 
+.animated-type-container__one {
+    margin-bottom: 4rem;
+    @include mq(desktop) {
+        margin-bottom: 0;
+    }
+}
+
+.animated-type-container__two {
+    margin-top: -10vw;
+    @include mq(desktop) {
+        margin-top: -8.5vw;
+    }
+}
+
+.animated-type-header__one {
+    margin-left: 0px;
+    color: $brand-1;
+}
+.animated-type-header__two {
+    margin-right: -38vw;
+    color: $brand-1;
+    @include mq(desktop) {
+        margin-right: -19vw;
+    }
+}
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -277,3 +303,4 @@
         margin-top: 0px;
     }
 }
+

@@ -1,7 +1,7 @@
 .article {
     .header {
-        display: grid;
-        place-items: center;
+        display: flex;
+        justify-content: center;
         height: 50vh;
         width: 100%;
         // justify-content: center;
@@ -15,12 +15,12 @@
         @include mq(desktop) {
             height: 90vh;
             min-height: 500px;
-            padding-top: 2.5vh;
+            padding-top: 40px;
         }
 
         &-container {
             grid-area: 1 / 1;
-            max-height: 90%;
+            max-height: 80vh;
             max-width: 90vw;
             position: relative;
 

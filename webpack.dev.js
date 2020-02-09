@@ -4,13 +4,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     devtool: "eval-cheap-module-source-map",
     entry: {
+        tweenmax: "./src/assets/TweenMax.min.js",
         index: "./src/index.js",
-        internet: "./src/project/internet.js",
-        tweenmax: "./src/assets/TweenMax.min.js"
+        internet: "./src/project/internet.js"
     },
     devServer: {
         port: 8080,
-        contentBase: path.join(__dirname, "dist")
+        contentBase: path.join(__dirname, "public_html")
     },
     node: {
         fs: "empty"
@@ -26,7 +26,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(scss|css)$/,
+                test: /\.(scss|css|sass)$/,
                 use: [
                     {
                         // creates style nodes from JS strings

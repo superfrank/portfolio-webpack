@@ -18,11 +18,10 @@
         position: relative;
         justify-self: start;
         grid-column: span 2;
-        margin-top: -10vw;
+
         @include mq(desktop) {
-            justify-self: end;
+            // justify-self: end;
             grid-column: span 1;
-            margin-top: -8.5vw;
         }
     }
     &__col-2 {
@@ -86,6 +85,9 @@
 
 .title-alt {
     color: $black;
+    @include mq(desktop) {
+    font-size: $font-size-five;
+}
 }
 
 .project-list__item {

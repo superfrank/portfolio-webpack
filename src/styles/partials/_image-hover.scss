@@ -65,7 +65,7 @@ a.preview__text-link[data-fx="2"]:hover::after {
 }
 
 .hover-reveal {
-    position: fixed;
+    position: fixed !important;
     width: 50vw;
     height: 30vw;
     top: 0;
