@@ -2,7 +2,7 @@ const path = require("path");
 
 const CleanWebpackPlugin = require("clean-webpack-plugin"); //installed via npm
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-//const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 const buildPath = path.resolve(__dirname, "public_html");
@@ -126,7 +126,9 @@ module.exports = {
             chunks: ["internet"],
             filename: "internet.html"
         }),
-
+        new MiniCssExtractPlugin({
+            filename: "styles.[contenthash].css"
+        }),
         new OptimizeCssAssetsPlugin({
             cssProcessor: require("cssnano"),
             cssProcessorOptions: {
