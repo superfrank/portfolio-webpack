@@ -2,7 +2,7 @@ const path = require("path");
 
 const CleanWebpackPlugin = require("clean-webpack-plugin"); //installed via npm
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+//const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 const buildPath = path.resolve(__dirname, "public_html");
@@ -33,21 +33,18 @@ module.exports = {
                 }
             },
             {
-                test: /\.(scss|css|sass)$/,
+                test: /\.(scss|css)$/,
                 use: [
                     {
-                        loader: MiniCssExtractPlugin.loader
-                    },
-                    {
-                        // translates CSS into CommonJS
-                        loader: "css-loader",
+                        // creates style nodes from JS strings
+                        loader: "style-loader",
                         options: {
                             sourceMap: true
                         }
                     },
                     {
-                        // Runs compiled CSS through postcss for vendor prefixing
-                        loader: "postcss-loader",
+                        // translates CSS into CommonJS
+                        loader: "css-loader?url=false",
                         options: {
                             sourceMap: true
                         }
@@ -61,6 +58,7 @@ module.exports = {
                             sourceMapContents: true
                         }
                     }
+                    // Please note we are not running postcss here
                 ]
             },
             {
@@ -128,9 +126,7 @@ module.exports = {
             chunks: ["internet"],
             filename: "internet.html"
         }),
-        new MiniCssExtractPlugin({
-            filename: "styles.[contenthash].css"
-        }),
+
         new OptimizeCssAssetsPlugin({
             cssProcessor: require("cssnano"),
             cssProcessorOptions: {
