@@ -36,10 +36,6 @@
             position: relative;
             margin-bottom: 40px;
 
-            @include mq(desktop) {
-                // max-height: 90vh;
-            }
-
             img {
                 justify-self: center;
                 width: 100%;
@@ -47,12 +43,12 @@
                 height: auto;
 
                 @include mq(desktop) {
-                    width: 90vw;
-                    max-width: 90vw;
+                    width: 86vw;
+                    max-width: 86vw;
                 }
                 @include mq(ultraWide) {
-                    width: 80vw;
-                    max-width: 80vw;
+                    width: 78vw;
+                    max-width: 78vw;
                 }
             }
 
@@ -209,7 +205,7 @@ h3 {
     color: white;
     line-height: 1;
     margin-bottom: 1rem;
-    margin-top: 7vw;
+    margin-top: 8vw;
 
     @include mq(desktop) {
         font-size: $font-size-eight;
@@ -220,8 +216,10 @@ h3 {
     &__link {
         display: none;
         @include mq(desktop) {
-            display: inline;
-            font-size: 1.3vw;
+            display: flex;
+            position: absolute;
+            margin-top: -1.3vw;
+            font-size: 1.5vw;
             margin-left: 1vw;
         }
         color: white;
@@ -233,14 +231,17 @@ h3 {
 
         span {
             margin-right: 1vw;
+            // margin-top: 2vw;
+            // transform-origin: 20px 10px;
             svg {
-                width: 4vw;
+                width: 8vw;
                 height: auto;
             }
             @include mq(desktop) {
                 margin-right: 0.25vw;
+                margin-top: -0.2vw;
                 svg {
-                    width: 1.2vw;
+                    width: 2vw;
                     height: auto;
                 }
             }
@@ -266,6 +267,10 @@ h3 {
     }
 }
 
+.inline-link {
+    display: inline-block;
+}
+
 .standfirst {
     font-size: $font-size-five;
     margin-bottom: 4vw;
@@ -273,14 +278,6 @@ h3 {
         font-size: $font-size-two;
         margin-bottom: 2vw;
     }
-}
-
-.link-arrow {
-    display: inline;
-    position: relative;
-    height: 2em;
-    width: auto;
-    margin-right: 12px;
 }
 
 .information {
@@ -321,12 +318,15 @@ h3 {
     }
 
     &__link {
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        font-size: 5vw;
+        margin-top: 2vw;
+        margin-bottom: 8vw;
+        font-size: 4vw;
+        svg {
+            margin-top: -1vw;
+        }
 
         .headline__link {
-            display: block;
+            display: flex;
         }
     }
 
