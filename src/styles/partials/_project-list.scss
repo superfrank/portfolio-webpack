@@ -55,11 +55,14 @@
         // text-align: right;
         position: relative;
         display: inline-block;
-        color: grey;
+        color: $grey;
         width: 5vw;
         @include mq(desktop) {
             width: 2.5vw;
         }
+    }
+    &__arrow {
+        color: $grey;
     }
 
     &__link {

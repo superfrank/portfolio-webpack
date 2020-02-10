@@ -6,11 +6,9 @@
 }
 
 .block__link:hover {
-    h2 {
-        color: $brand-1;
-        transition: color 0.6s ease;
-    }
-    span {
+    h2,
+    span,
+    sup {
         color: $brand-1;
         transition: color 0.6s ease;
     }
