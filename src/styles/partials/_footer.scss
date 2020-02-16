@@ -17,17 +17,6 @@
 
     &__top {
         display: flex;
-        &:hover {
-            svg path {
-                transform-origin: center center;
-                animation: wiggle 1000ms ease-in-out;
-            }
-
-            .footer__description {
-                color: $brand-1;
-                transition: color 0.6s ease;
-            }
-        }
     }
 
     .mickey-hand {
@@ -91,6 +80,21 @@
     margin-top: 2.8rem;
     @include mq(desktop) {
         margin-top: 2.5vw;
+    }
+}
+
+.mickey-hand__wiggle {
+    display: flex;
+    &:hover {
+        svg path {
+            transform-origin: center center;
+            animation: wiggle 1000ms ease-in-out;
+        }
+
+        .description {
+            color: $brand-1;
+            transition: color 0.6s ease;
+        }
     }
 }
 
