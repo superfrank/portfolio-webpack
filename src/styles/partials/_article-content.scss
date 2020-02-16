@@ -102,7 +102,7 @@
         flex-flow: row wrap;
         .svg__hand--mobile {
             margin-top: 1vw;
-            }
+        }
         .svg__hand--desktop {
             display: none;
         }
@@ -120,10 +120,9 @@
         }
         svg {
             width: 3.5vw;
-            height: auto;
+            height: 100%;
             display: inline;
             margin-right: 1vw;
-            
 
             @include mq(desktop) {
                 margin-top: -1vw;
