@@ -19,8 +19,8 @@
         display: flex;
         &:hover {
             svg path {
-              transform-origin: center center;
-              animation: wiggle 1000ms ease-in-out;
+                transform-origin: center center;
+                animation: wiggle 1000ms ease-in-out;
             }
 
             .footer__description {
@@ -80,6 +80,17 @@
 
     @include mq(desktop) {
         font-size: $font-size-two;
+    }
+}
+
+.footer__article {
+    svg {
+        margin-top: 0.3vw;
+    }
+    border-top: none;
+    margin-top: 2.8rem;
+    @include mq(desktop) {
+        margin-top: 2.5vw;
     }
 }
 
