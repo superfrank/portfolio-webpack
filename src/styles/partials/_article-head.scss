@@ -353,6 +353,7 @@ h3 {
     margin-left: 0;
     margin-right: 0px;
     animation: moveAcross 20s infinite linear;
+    transform: translate3d(0, 0, 0);
     @include mq(desktop) {
         animation: moveAcross 40s infinite linear;
     }
