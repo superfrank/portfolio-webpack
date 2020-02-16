@@ -8,7 +8,7 @@ import TweenMax from "./assets/TweenMax.min.js";
 // Marquee3k.init();
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("page-loaded");
+    // console.log("page-loaded");
 });
 
 const mq = window.matchMedia("(max-width: 980px)");
@@ -46,7 +46,7 @@ if (mq.matches) {
 inView(".animated-type h2")
     .on("enter", section => {
         // classList.add adds a class
-        console.log("in-view");
+        // console.log("in-view");
         anime({
             targets: ".first",
             translateY: "8vw",
@@ -69,7 +69,7 @@ inView(".animated-type h2")
         });
     })
     .on("exit", section => {
-        console.log("out-view");
+        // console.log("out-view");
     });
 
 inView.threshold(1);
@@ -269,7 +269,7 @@ if (mq.matches) {
                 imgel.style.width = 0;
                 imgel.src = imgsArr[i];
                 imgel.className = "preload";
-                contentel.appendChild(imgel);
+                // contentel.appendChild(imgel);
             }
         });
         imagesLoaded(document.querySelectorAll(".preload"), () =>
