@@ -16,11 +16,7 @@
 
         @include mq(desktop) {
             font-size: $font-size-five;
-            padding-top: calc(32px + 1rem);
-        }
-        @include mq(wide) {
-            font-size: $font-size-five;
-            padding-top: calc(2.5vh + 32px);
+            padding-top: calc(1.6vw + 32px);
         }
     }
 }

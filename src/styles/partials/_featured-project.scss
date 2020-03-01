@@ -262,7 +262,7 @@
                 width: 5vw;
                 height: 5vw;
                 border-radius: 50%;
-                border: 1px solid #dcdcdc;
+                border: 2px solid #dcdcdc;
                 margin-left: -1.1vw;
                 margin-top: 0.8vw;
                 @include mq(desktop) {
@@ -303,7 +303,7 @@
         span {
             color: white;
             &::before {
-                border: 1px solid $brand-1;
+                border: 2px solid $brand-1;
                 background-color: $brand-1;
             }
         }
