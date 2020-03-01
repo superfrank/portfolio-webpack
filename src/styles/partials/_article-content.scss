@@ -15,7 +15,11 @@
     }
     .image {
         margin-bottom: 2rem;
+        margin-left: -10px;
+        margin-right: -10px;
         @include mq(desktop) {
+            margin-left: 0px;
+            margin-right: 0px;
             margin-bottom: 5vh;
         }
         img {
@@ -124,7 +128,6 @@
     }
     .caption {
         margin-bottom: 2.8rem;
-        display: flex;
         .svg__hand--mobile {
             margin-top: 1vw;
         }
@@ -136,6 +139,8 @@
             margin-bottom: 5vw;
             align-self: flex-start;
             padding-top: 1vw;
+            display: flex;
+            flex-wrap: wrap;
             .svg__hand--desktop {
                 display: flex;
             }
@@ -155,6 +160,18 @@
         }
         &__header {
             color: $brand-1;
+            display: inline-block;
+            margin-bottom: 0px;
+
+            @include mq(desktop) {
+                display: block;
+                width: 50%;
+            }
+        }
+        &__header--hand {
+            @include mq(desktop) {
+                margin-left: 0.5vw;
+            }
         }
         &__body {
             width: 100%;
@@ -167,5 +184,8 @@
         display: inline-block;
         position: relative;
         margin-right: 1vw;
+        @include mq(desktop) {
+            display: none;
+        }
     }
 }

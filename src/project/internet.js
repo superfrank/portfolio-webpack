@@ -20,7 +20,7 @@ if (mqTwo.matches) {
 } else {
     anime({
         targets: ".svg__hand--desktop",
-        keyframes: [{ translateX: -18 }, { translateX: 0 }],
+        keyframes: [{ translateX: "-1.5vw" }, { translateX: 0 }],
         delay: 2000,
         duration: 1500,
         easing: "spring(1, 80, 10, 0)",
