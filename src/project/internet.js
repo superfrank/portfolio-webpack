@@ -9,7 +9,7 @@ const mqTwo = window.matchMedia("(max-width: 980px)");
 if (mqTwo.matches) {
     // window width is at least 500px
     anime({
-        targets: ".svg__hand--mobile",
+        targets: ".svg__hand__container--mobile",
         translateY: "-1.6vw",
         direction: "alternate",
         duration: "500",
