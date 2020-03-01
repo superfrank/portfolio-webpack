@@ -57,17 +57,17 @@
             content: "";
             position: absolute;
             width: 1px;
-            height: calc(0.65vw + 100% + 2px);
+            height: calc(0.8vw + 100% + 2px);
             background-color: $black;
             left: -1vw;
-            top: calc(1vw);
+            top: calc(0.6vw);
             @include mq(tablet) {
                 width: 2px;
             }
             @include mq(desktop) {
-                height: calc(0.65vw + 100%);
+                height: calc(0.75vw + 100%);
                 left: -0.5vw;
-                top: 0.35vw;
+                top: 0.25vw;
             }
         }
 
