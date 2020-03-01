@@ -288,13 +288,16 @@
                 transition: all 0.3s ease;
             }
         }
+        span.project-list__number {
+            transition: color 0.6s ease;
+        }
     }
 
     a:hover {
         h2 {
             color: $brand-1;
         }
-        h3 {
+        h3.featured-project__cta {
             color: $brand-1;
         }
         span {
@@ -303,6 +306,9 @@
                 border: 1px solid $brand-1;
                 background-color: $brand-1;
             }
+        }
+        span.project-list__number {
+            color: $brand-1;
         }
     }
 }

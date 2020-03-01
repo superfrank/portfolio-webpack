@@ -15,11 +15,7 @@
     }
     .image {
         margin-bottom: 2rem;
-        margin-left: -10px;
-        margin-right: -10px;
         @include mq(desktop) {
-            margin-left: 0px;
-            margin-right: 0px;
             margin-bottom: 5vh;
         }
         img {
@@ -95,6 +91,16 @@
                 margin-bottom: 5vw;
             }
         }
+
+        &__background,
+        &__mini {
+            margin-left: -10px;
+            margin-right: -10px;
+            @include mq(desktop) {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+        }
     }
     .text {
         display: grid;
@@ -162,15 +168,12 @@
             color: $brand-1;
             display: inline-block;
             margin-bottom: 0px;
-
-            @include mq(desktop) {
-                display: block;
-                width: 50%;
-            }
         }
         &__header--hand {
             @include mq(desktop) {
                 margin-left: 0.5vw;
+                display: block;
+                width: 50%;
             }
         }
         &__body {
