@@ -88,7 +88,7 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            name: "[name].[hash:20].[ext]",
+                            name: "[name].[hash:20].[ext]"
                         }
                     }
                 ]
