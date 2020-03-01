@@ -43,34 +43,65 @@ if (mq.matches) {
     });
 }
 
-inView(".animated-type h2")
-    .on("enter", section => {
-        // classList.add adds a class
-        // console.log("in-view");
-        anime({
-            targets: ".first",
-            translateY: "8vw",
-            rotate: "-15deg",
-            delay: 1500,
-            easing: "spring(2, 80, 10, 0)"
+if (mq.matches) {
+    inView(".animated-type h2")
+        .on("enter", section => {
+            // classList.add adds a class
+            // console.log("in-view");
+            anime({
+                targets: ".first",
+                translateY: "16vw",
+                rotate: "-15deg",
+                delay: 1000,
+                easing: "spring(2, 80, 10, 0)"
+            });
+            anime({
+                targets: ".second",
+                translateY: "16.5vw",
+                rotate: "15deg",
+                delay: 1050,
+                easing: "spring(2, 80, 10, 0)"
+            });
+            anime({
+                targets: ".third",
+                translateY: "16vw",
+                delay: 1100,
+                easing: "spring(2, 80, 10, 0)"
+            });
+        })
+        .on("exit", section => {
+            // console.log("out-view");
         });
-        anime({
-            targets: ".second",
-            translateY: "8.5vw",
-            rotate: "15deg",
-            delay: 1550,
-            easing: "spring(2, 80, 10, 0)"
+} else {
+    inView(".animated-type h2")
+        .on("enter", section => {
+            // classList.add adds a class
+            // console.log("in-view");
+            anime({
+                targets: ".first",
+                translateY: "8vw",
+                rotate: "-15deg",
+                delay: 1000,
+                easing: "spring(2, 80, 10, 0)"
+            });
+            anime({
+                targets: ".second",
+                translateY: "8.5vw",
+                rotate: "15deg",
+                delay: 1050,
+                easing: "spring(2, 80, 10, 0)"
+            });
+            anime({
+                targets: ".third",
+                translateY: "8vw",
+                delay: 1100,
+                easing: "spring(2, 80, 10, 0)"
+            });
+        })
+        .on("exit", section => {
+            // console.log("out-view");
         });
-        anime({
-            targets: ".third",
-            translateY: "8vw",
-            delay: 1600,
-            easing: "spring(2, 80, 10, 0)"
-        });
-    })
-    .on("exit", section => {
-        // console.log("out-view");
-    });
+}
 
 inView.threshold(1);
 
