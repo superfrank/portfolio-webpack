@@ -6,10 +6,7 @@
 
     @include mq(desktop) {
         margin-top: 25vw;
-    }
-
-    @include mq(wide) {
-        margin-bottom: calc(10vw + 80px);
+        margin-bottom: 20vw;
     }
 
     &__grid {
