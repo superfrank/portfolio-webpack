@@ -1,0 +1,31 @@
+.a-fade-in-up {
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+      transform: translate3d(0, 3vw, 0);
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  
+  @include mq(tablet) {
+    @keyframes fadeInUp {
+      from {
+        transform: translate3d(0, 1vw, 0);
+      }
+  
+      to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+  }
+  
