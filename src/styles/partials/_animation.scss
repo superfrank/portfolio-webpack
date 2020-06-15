@@ -1,11 +1,22 @@
-.a-fade-in-up {
-    animation-name: fadeInUp;
+.fade-up {
+    animation-name: fadeUp;
     animation-duration: 2s;
     animation-fill-mode: both;
+    animation-delay: 0.8s;
     opacity: 0;
 }
 
-@keyframes fadeInUp {
+.fade-down {
+    animation-name: fadeDown;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+
+
+@keyframes fadeUp {
     from {
       transform: translate3d(0, 3vw, 0);
     }
@@ -17,9 +28,33 @@
   }
   
   @include mq(tablet) {
-    @keyframes fadeInUp {
+    @keyframes fadeUp {
       from {
         transform: translate3d(0, 1vw, 0);
+      }
+  
+      to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+  }
+
+  @keyframes fadeDown {
+    from {
+      transform: translate3d(0, -3vw, 0);
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  
+  @include mq(tablet) {
+    @keyframes fadeDown {
+      from {
+        transform: translate3d(0, -1vw, 0);
       }
   
       to {
