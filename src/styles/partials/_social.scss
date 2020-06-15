@@ -1,15 +1,15 @@
 .site-nav__marquee-move {
     display: block;
-    position: absolute;
+    position: relative;
     width: 100%;
     left: 0;
     right: 0;
     overflow: hidden;
     white-space: nowrap;
-    margin-top: -11.6vw;
+    padding-left: calc(10px + 1vw);
 
     @include mq(desktop) {
-        margin-top: -4.9vw;
+        padding-left: calc(5% + 0.5vw);
     }
 }
 
@@ -23,12 +23,12 @@
     margin-left: 0px;
     width: calc(102vw);
     transform: translate3d(0, 0, 0);
-    animation: moveAcross 10s infinite linear;
+    // animation: moveAcross 10s infinite linear;
 
     @include mq(desktop) {
         width: calc(101vw);
         font-size: $font-size-two;
-        animation: moveAcross 15s infinite linear;
+        // animation: moveAcross 15s infinite linear;
     }
 
     .site-nav__item {
@@ -57,7 +57,7 @@
             content: "";
             position: absolute;
             width: 1px;
-            height: calc(0.8vw + 100% + 2px);
+            height: calc(1vw + 100% + 2px);
             background-color: $black;
             left: -1vw;
             top: calc(0.6vw);
@@ -65,7 +65,7 @@
                 width: 2px;
             }
             @include mq(desktop) {
-                height: calc(0.75vw + 100%);
+                height: calc(1vw + 100% + 1px);
                 left: -0.5vw;
                 top: 0.25vw;
             }
