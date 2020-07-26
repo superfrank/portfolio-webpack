@@ -6,14 +6,15 @@ module.exports = {
     entry: {
         index: "./src/index.js",
         internet: "./src/project/internet.js",
-        tweenmax: "./src/assets/TweenMax.min.js"
+        tweenmax: "./src/assets/TweenMax.min.js",
+        google: "./src/onepage/google.js",
     },
     devServer: {
         port: 8080,
-        contentBase: path.join(__dirname, "dist")
+        contentBase: path.join(__dirname, "dist"),
     },
     node: {
-        fs: "empty"
+        fs: "empty",
     },
     module: {
         rules: [
@@ -22,8 +23,8 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: "babel-loader",
                 options: {
-                    presets: ["env"]
-                }
+                    presets: ["env"],
+                },
             },
             {
                 test: /\.(scss|css)$/,
@@ -32,15 +33,15 @@ module.exports = {
                         // creates style nodes from JS strings
                         loader: "style-loader",
                         options: {
-                            sourceMap: true
-                        }
+                            sourceMap: true,
+                        },
                     },
                     {
                         // translates CSS into CommonJS
                         loader: "css-loader?url=false",
                         options: {
-                            sourceMap: true
-                        }
+                            sourceMap: true,
+                        },
                     },
                     {
                         // compiles Sass to CSS
@@ -48,11 +49,11 @@ module.exports = {
                         options: {
                             outputStyle: "expanded",
                             sourceMap: true,
-                            sourceMapContents: true
-                        }
-                    }
+                            sourceMapContents: true,
+                        },
+                    },
                     // Please note we are not running postcss here
-                ]
+                ],
             },
             {
                 test: /\.(gif|svg)$/i,
@@ -62,10 +63,10 @@ module.exports = {
                         loader: "image-webpack-loader",
                         options: {
                             bypassOnDebug: true, // webpack@1.x
-                            disable: true // webpack@2.x and newer
-                        }
-                    }
-                ]
+                            disable: true, // webpack@2.x and newer
+                        },
+                    },
+                ],
             },
             {
                 // Load all images as base64 encoding if they are smaller than 8192 bytes
@@ -76,10 +77,10 @@ module.exports = {
                         options: {
                             // On development we want to see where the file is coming from, hence we preserve the [path]
                             name: "[path][name].[ext]?hash=[hash:20]",
-                            limit: 8192
-                        }
-                    }
-                ]
+                            limit: 8192,
+                        },
+                    },
+                ],
             },
             {
                 // Load all icons
@@ -88,10 +89,10 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            name: "[name].[hash:20].[ext]"
-                        }
-                    }
-                ]
+                            name: "[name].[hash:20].[ext]",
+                        },
+                    },
+                ],
             },
             {
                 // Load all videos
@@ -100,25 +101,31 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            name: "[path][name].[ext]?hash=[hash:20]"
-                        }
-                    }
-                ]
-            }
-        ]
+                            name: "[path][name].[ext]?hash=[hash:20]",
+                        },
+                    },
+                ],
+            },
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./index.html",
             inject: true,
             chunks: ["index"],
-            filename: "index.html"
+            filename: "index.html",
         }),
         new HtmlWebpackPlugin({
             template: "./src/project/internet.html",
             inject: true,
             chunks: ["internet"],
-            filename: "internet.html"
-        })
-    ]
+            filename: "internet.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/onepage/google.html",
+            inject: true,
+            chunks: ["google"],
+            filename: "google.html",
+        }),
+    ],
 };
