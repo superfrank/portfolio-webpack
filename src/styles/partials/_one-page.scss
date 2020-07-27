@@ -23,7 +23,7 @@ $g-green: #34a853;
         justify-content: center;
     }
     h1 {
-        font-size: $font-size-ten;
+        font-size: 15vw;
 
         @include mq(desktop) {
             font-size: $font-size-eight;
@@ -49,15 +49,20 @@ $g-green: #34a853;
         background: #fff;
         display: flex;
         border: 1px solid #dfe1e5;
-        border-radius: 3.5vw;
-        height: 8vw;
+        border-radius: 10vw;
+        height: 10vw;
         width: 95vw;
         margin: 0 auto;
         align-items: center;
-        padding-left: 1.5vw;
+        padding-left: 3vw;
+        margin-top: 3vw;
 
         @include mq(desktop) {
+            margin-top: 0vw;
             width: 40vw;
+            height: 3.5vw;
+            border-radius: 3.5vw;
+            padding-left: 1.5vw;
         }
     }
     h2 {
@@ -77,15 +82,25 @@ $g-green: #34a853;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 12vw;
-        height: 3vw;
+        width: 46vw;
+        height: 8vw;
         border-radius: 0.3vw;
-        margin-top: 2vw;
+        margin-top: 5vw;
         cursor: pointer;
 
+        @include mq(desktop) {
+            width: 12vw;
+            height: 3vw;
+            border-radius: 0.3vw;
+            margin-top: 1.5vw;
+        }
+
         h3 {
-            font-size: 1.2vw;
+            font-size: 5vw;
             color: #5f6368;
+            @include mq(desktop) {
+                font-size: 1.2vw;
+            }
         }
 
         &:hover {
@@ -100,11 +115,17 @@ $g-green: #34a853;
     }
 
     h4 {
-        font-size: $font-size-eight;
+        font-size: 10vw;
         padding-top: 2.5%;
+        line-height: 1;
+        @include mq(desktop) {
+            font-size: $font-size-eight;
+        }
     }
-    #point-1 {
-        h4 {
+    #point-1,
+    #point-4 {
+        h4,
+        a {
             color: $g-blue;
         }
     }
@@ -115,16 +136,19 @@ $g-green: #34a853;
         }
     }
     #point-3 {
-        h4 {
+        h4,
+        a {
             color: $g-yellow;
+        }
+    }
+    #point-5 {
+        h4,
+        a {
+            color: $g-green;
         }
     }
     .grid {
         margin: 0;
-    }
-
-    h4:nth-of-type(1) {
-        color: $g-blue;
     }
 
     p {

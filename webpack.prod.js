@@ -12,14 +12,15 @@ module.exports = {
     entry: {
         index: "./src/index.js",
         internet: "./src/project/internet.js",
-        tweenmax: "./src/assets/TweenMax.min.js"
+        tweenmax: "./src/assets/TweenMax.min.js",
+        hellogoogle: "./src/onepage/hello-google.js",
     },
     output: {
         filename: "[name].[hash:20].js",
-        path: buildPath
+        path: buildPath,
     },
     node: {
-        fs: "empty"
+        fs: "empty",
     },
     module: {
         rules: [
@@ -29,8 +30,8 @@ module.exports = {
                 loader: "babel-loader",
 
                 options: {
-                    presets: ["env"]
-                }
+                    presets: ["env"],
+                },
             },
             {
                 test: /\.(scss|css)$/,
@@ -39,15 +40,15 @@ module.exports = {
                         // creates style nodes from JS strings
                         loader: "style-loader",
                         options: {
-                            sourceMap: true
-                        }
+                            sourceMap: true,
+                        },
                     },
                     {
                         // translates CSS into CommonJS
                         loader: "css-loader?url=false",
                         options: {
-                            sourceMap: true
-                        }
+                            sourceMap: true,
+                        },
                     },
                     {
                         // compiles Sass to CSS
@@ -55,11 +56,11 @@ module.exports = {
                         options: {
                             outputStyle: "expanded",
                             sourceMap: true,
-                            sourceMapContents: true
-                        }
-                    }
+                            sourceMapContents: true,
+                        },
+                    },
                     // Please note we are not running postcss here
-                ]
+                ],
             },
             {
                 test: /\.(gif|svg)$/i,
@@ -69,10 +70,10 @@ module.exports = {
                         loader: "image-webpack-loader",
                         options: {
                             bypassOnDebug: true, // webpack@1.x
-                            disable: true // webpack@2.x and newer
-                        }
-                    }
-                ]
+                            disable: true, // webpack@2.x and newer
+                        },
+                    },
+                ],
             },
             {
                 // Load all images as base64 encoding if they are smaller than 8192 bytes
@@ -82,19 +83,19 @@ module.exports = {
                         loader: "url-loader",
                         options: {
                             name: "[name].[hash:20].[ext]",
-                            limit: 8192
-                        }
-                    }
-                ]
+                            limit: 8192,
+                        },
+                    },
+                ],
             },
             {
                 // Load all icons
                 test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
                 use: [
                     {
-                        loader: "file-loader"
-                    }
-                ]
+                        loader: "file-loader",
+                    },
+                ],
             },
             {
                 // Load all videos
@@ -103,12 +104,12 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            name: "[name].[hash:20].[ext]"
-                        }
-                    }
-                ]
-            }
-        ]
+                            name: "[name].[hash:20].[ext]",
+                        },
+                    },
+                ],
+            },
+        ],
     },
     plugins: [
         new CleanWebpackPlugin(buildPath),
@@ -117,30 +118,37 @@ module.exports = {
             // Inject the js bundle at the end of the body of the given template
             inject: "body",
             chunks: ["index"],
-            filename: "index.html"
+            filename: "index.html",
         }),
         new HtmlWebpackPlugin({
             template: "./src/project/internet.html",
             // Inject the js bundle at the end of the body of the given template
             inject: "body",
             chunks: ["internet"],
-            filename: "internet.html"
+            filename: "internet.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/onepage/hello-google.html",
+            // Inject the js bundle at the end of the body of the given template
+            inject: "body",
+            chunks: ["hellogoogle"],
+            filename: "hello-google.html",
         }),
         new MiniCssExtractPlugin({
-            filename: "styles.[contenthash].css"
+            filename: "styles.[contenthash].css",
         }),
         new OptimizeCssAssetsPlugin({
             cssProcessor: require("cssnano"),
             cssProcessorOptions: {
                 map: {
-                    inline: false
+                    inline: false,
                 },
                 discardComments: {
-                    removeAll: true
+                    removeAll: true,
                 },
-                discardUnused: false
+                discardUnused: false,
             },
-            canPrint: true
-        })
-    ]
+            canPrint: true,
+        }),
+    ],
 };

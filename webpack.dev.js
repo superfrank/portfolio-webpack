@@ -7,7 +7,7 @@ module.exports = {
         index: "./src/index.js",
         internet: "./src/project/internet.js",
         tweenmax: "./src/assets/TweenMax.min.js",
-        google: "./src/onepage/google.js",
+        hellogoogle: "./src/onepage/hello-google.js",
     },
     devServer: {
         port: 8080,
@@ -122,10 +122,10 @@ module.exports = {
             filename: "internet.html",
         }),
         new HtmlWebpackPlugin({
-            template: "./src/onepage/google.html",
+            template: "./src/onepage/hello-google.html",
             inject: true,
-            chunks: ["google"],
-            filename: "google.html",
+            chunks: ["hellogoogle"],
+            filename: "hello-google.html",
         }),
     ],
 };

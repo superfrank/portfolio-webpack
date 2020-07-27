@@ -3,7 +3,11 @@ require("../styles/index.scss");
 
 document.addEventListener("DOMContentLoaded", function (event) {
     // array with texts to type in typewriter
-    var dataText = ["What can you tell me about Frank Hulley-Jones?"];
+    var dataText = [
+        "Show me a creative cover letter",
+        "Who should I hire as a UX Engineer?",
+        "Tell me about Frank Hulley-Jones",
+    ];
 
     // type one text in the typwriter
     // keeps calling itself until the text is finished
@@ -22,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // text finished, call callback if there is a callback function
         else if (typeof fnCallback == "function") {
             // call callback after timeout
-            setTimeout(fnCallback, 700);
+            setTimeout(fnCallback, 1500);
         }
     }
     // start a typewriter animation for a text in the dataText array
@@ -47,21 +51,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 const scrollLinks = document.querySelectorAll(".js-scroll");
 
-scrollLinks.forEach((link) => {
-    // we can listen for events on elements and then run a function
-    link.addEventListener("click", (event) => {
-        // using the event keyword we get access to a snapshot of what
-        // happened when we clicked on our link
+// scrollLinks.forEach((link) => {
+//     // we can listen for events on elements and then run a function
+//     link.addEventListener("click", (event) => {
+//         // using the event keyword we get access to a snapshot of what
+//         // happened when we clicked on our link
 
-        // it will block the default browser behaviour of the link jumping to the href attribute
-        event.preventDefault();
+//         // it will block the default browser behaviour of the link jumping to the href attribute
+//         event.preventDefault();
 
-        //here we grab the href attribute from our link
-        const href = link.getAttribute("href");
+//         //here we grab the href attribute from our link
+//         const href = link.getAttribute("href");
 
-        //here we use the new scrollIntoView freature to scroll to our desired elements in a smooth fashion
-        document.querySelector(href).scrollIntoView({
-            behavior: "smooth",
-        });
-    });
-});
+//         //here we use the new scrollIntoView freature to scroll to our desired elements in a smooth fashion
+//         document.querySelector(href).scrollIntoView({
+//             behavior: "smooth",
+//         });
+//     });
+// });
