@@ -51,21 +51,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 const scrollLinks = document.querySelectorAll(".js-scroll");
 
-// scrollLinks.forEach((link) => {
-//     // we can listen for events on elements and then run a function
-//     link.addEventListener("click", (event) => {
-//         // using the event keyword we get access to a snapshot of what
-//         // happened when we clicked on our link
+scrollLinks.forEach((link) => {
+    // we can listen for events on elements and then run a function
+    link.addEventListener("click", (event) => {
+        // using the event keyword we get access to a snapshot of what
+        // happened when we clicked on our link
 
-//         // it will block the default browser behaviour of the link jumping to the href attribute
-//         event.preventDefault();
+        // it will block the default browser behaviour of the link jumping to the href attribute
+        event.preventDefault();
 
-//         //here we grab the href attribute from our link
-//         const href = link.getAttribute("href");
+        //here we grab the href attribute from our link
+        const href = link.getAttribute("href");
 
-//         //here we use the new scrollIntoView freature to scroll to our desired elements in a smooth fashion
-//         document.querySelector(href).scrollIntoView({
-//             behavior: "smooth",
-//         });
-//     });
-// });
+        //here we use the new scrollIntoView freature to scroll to our desired elements in a smooth fashion
+        document.querySelector(href).scrollIntoView({
+            behavior: "smooth",
+        });
+    });
+});

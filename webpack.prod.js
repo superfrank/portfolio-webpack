@@ -132,7 +132,7 @@ module.exports = {
             // Inject the js bundle at the end of the body of the given template
             inject: "body",
             chunks: ["hellogoogle"],
-            filename: "hello-google",
+            filename: "hello-google.html",
         }),
         new MiniCssExtractPlugin({
             filename: "styles.[contenthash].css",

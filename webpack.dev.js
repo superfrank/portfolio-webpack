@@ -125,7 +125,7 @@ module.exports = {
             template: "./src/onepage/hello-google.html",
             inject: true,
             chunks: ["hellogoogle"],
-            filename: "hello-google",
+            filename: "hello-google.html",
         }),
     ],
 };
