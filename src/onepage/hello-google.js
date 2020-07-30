@@ -1,5 +1,6 @@
 require("normalize.css/normalize.css");
 require("../styles/index.scss");
+import anime from "animejs";
 
 document.addEventListener("DOMContentLoaded", function (event) {
     // array with texts to type in typewriter
