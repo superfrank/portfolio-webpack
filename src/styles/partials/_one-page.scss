@@ -188,7 +188,7 @@ $g-green: #34a853;
         animation-name: wave; /* Refers to the name of your @keyframes element below */
         animation-duration: 5s; /* Change to speed up or slow down */
         animation-iteration-count: infinite; /* Never stop waving :) */
-        transform-origin: 20% 40%; /* Pivot around the bottom-left palm */
+        transform-origin: 5% 40%; /* Pivot around the bottom-left palm */
     }
     .mickey-hand__one {
         svg {
@@ -241,6 +241,49 @@ $g-green: #34a853;
     @keyframes caret {
         50% {
             border-color: transparent;
+        }
+    }
+
+    [data-aos="new-fade-down"] {
+        opacity: 0;
+        transition-property: transform, opacity;
+        transform: translate3d(0, -3vw, 0);
+
+        &.aos-animate {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        @include mq(desktop) {
+            transform: translate3d(0, -1vw, 0);
+
+            &.aos-animate {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+    [data-aos="new-fade-up"] {
+        opacity: 0;
+        transition-property: transform, opacity;
+        transform: translate3d(0, 3vw, 0);
+
+        &.aos-animate {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        @include mq(desktop) {
+            transform: translate3d(0, 1vw, 0);
+
+            &.aos-animate {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+    [data-aos] {
+        body[data-aos-easing="new-easing"] &,
+        &[data-aos][data-aos-easing="new-easing"] {
+            transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
         }
     }
 }
