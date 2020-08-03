@@ -114,6 +114,127 @@ $g-green: #34a853;
             }
         }
     }
+    .multiple-hands {
+        margin-top: -10vw;
+        z-index: -1;
+
+        svg {
+            overflow: visible;
+            width: 74vw;
+            height: 100%;
+
+            @include mq(desktop) {
+                width: 22vw;
+                height: 100%;
+            }
+        }
+        @include mq(desktop) {
+            margin-top: -3vw;
+        }
+    }
+    .fade-in {
+        opacity: 0;
+
+        animation: fadeIn 1s ease-in forwards;
+        animation-delay: 3s;
+    }
+
+    .multiple-hand {
+        &__one {
+            animation: slide1 4s ease-in-out infinite;
+            animation-delay: 0s;
+        }
+        &__two {
+            animation: slide2 4s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+        &__three {
+            animation: slide3 4s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+        &__four {
+            animation: slide4 4s ease-in-out infinite;
+            animation-delay: 1.5s;
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
+
+    @keyframes slide1 {
+        0% {
+            transform: translate3d(0.1vw, 0, 0);
+        }
+        10% {
+            transform: translate3d(-0.8vw, 0, 0);
+        }
+        20% {
+            transform: translate3d(0.1vw, 0, 0);
+        }
+        25% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+        100% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+    }
+    @keyframes slide2 {
+        0% {
+            transform: translate3d(0.1vw, -0.1vw, 0);
+        }
+        10% {
+            transform: translate3d(-0.8vw, 0.8vw, 0);
+        }
+        20% {
+            transform: translate3d(0.1vw, -0.1vw, 0);
+        }
+        25% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+        100% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+    }
+    @keyframes slide3 {
+        0% {
+            transform: translate3d(-0.1vw, -0.1vw, 0);
+        }
+        10% {
+            transform: translate3d(0.8vw, 0.8vw, 0);
+        }
+        20% {
+            transform: translate3d(-0.1vw, -0.1vw, 0);
+        }
+        25% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+        100% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+    }
+    @keyframes slide4 {
+        0% {
+            transform: translate3d(-0.1vw, 0, 0);
+        }
+        10% {
+            transform: translate3d(0.8vw, 0, 0);
+        }
+        20% {
+            transform: translate3d(-0.1vw, 0, 0);
+        }
+        25% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+        100% {
+            transform: translate3d(-0vw, 0, 0);
+        }
+    }
 
     h4 {
         font-size: 10vw;
@@ -278,12 +399,6 @@ $g-green: #34a853;
             &.aos-animate {
                 transform: translate3d(0, 0, 0);
             }
-        }
-    }
-    [data-aos] {
-        body[data-aos-easing="new-easing"] &,
-        &[data-aos][data-aos-easing="new-easing"] {
-            transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
         }
     }
 }

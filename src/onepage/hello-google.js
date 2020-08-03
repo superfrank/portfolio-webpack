@@ -1,5 +1,6 @@
 require("normalize.css/normalize.css");
 require("../styles/index.scss");
+import anime from "animejs";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -35,10 +36,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     // start a typewriter animation for a text in the dataText array
     function StartTextAnimation(i) {
-        if (typeof dataText[i] == "undefined") {
+        if (typeof dataText[i] === "undefined") {
             setTimeout(function () {
                 StartTextAnimation(0);
-            }, 4000);
+            }, 1500);
         }
         // check if dataText[i] exists
         if (i < dataText[i].length) {
