@@ -169,7 +169,7 @@ $g-green: #34a853;
 
     @keyframes slide1 {
         0% {
-            transform: translate3d(0.1vw, 0, 0);
+            transform: translate3d(0vw, 0, 0);
         }
         10% {
             transform: translate3d(-0.8vw, 0, 0);
@@ -186,10 +186,10 @@ $g-green: #34a853;
     }
     @keyframes slide2 {
         0% {
-            transform: translate3d(0.1vw, -0.1vw, 0);
+            transform: translate3d(0vw, -0vw, 0);
         }
         10% {
-            transform: translate3d(-0.8vw, 0.8vw, 0);
+            transform: translate3d(-0.5vw, 0.5vw, 0);
         }
         20% {
             transform: translate3d(0.1vw, -0.1vw, 0);
@@ -203,10 +203,10 @@ $g-green: #34a853;
     }
     @keyframes slide3 {
         0% {
-            transform: translate3d(-0.1vw, -0.1vw, 0);
+            transform: translate3d(-0vw, -0vw, 0);
         }
         10% {
-            transform: translate3d(0.8vw, 0.8vw, 0);
+            transform: translate3d(0.5vw, 0.5vw, 0);
         }
         20% {
             transform: translate3d(-0.1vw, -0.1vw, 0);
@@ -220,7 +220,7 @@ $g-green: #34a853;
     }
     @keyframes slide4 {
         0% {
-            transform: translate3d(-0.1vw, 0, 0);
+            transform: translate3d(0vw, 0, 0);
         }
         10% {
             transform: translate3d(0.8vw, 0, 0);
