@@ -244,29 +244,76 @@ $g-green: #34a853;
             font-size: $font-size-eight;
         }
     }
+    a {
+        background: linear-gradient(to bottom, $g-blue 0%, $g-blue 100%);
+        background-position: 0 100%;
+        background-repeat: repeat-x;
+        background-size: 3px 3px;
+        color: #000;
+        text-decoration: none;
+    }
+    a:hover {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%234285f4' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+        background-position: 0 100%;
+        background-size: auto 6px;
+        background-repeat: repeat-x;
+        text-decoration: none;
+    }
+
     #point-1,
     #point-4 {
-        h4,
-        a {
+        h4 {
             color: $g-blue;
+        }
+        a {
         }
     }
     #point-2 {
-        h4,
+        h4 {
+            color: $g-red;
+        }
         a {
             color: $g-red;
         }
     }
     #point-3 {
-        h4,
-        a {
+        h4 {
             color: $g-yellow;
+        }
+        a {
+            background: linear-gradient(
+                to bottom,
+                $g-yellow 0%,
+                $g-yellow 100%
+            );
+            background-position: 0 100%;
+            background-repeat: repeat-x;
+            background-size: 3px 3px;
+        }
+        a:hover {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23fbbc05' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+            background-position: 0 100%;
+            background-size: auto 6px;
+            background-repeat: repeat-x;
+            text-decoration: none;
         }
     }
     #point-5 {
-        h4,
-        a {
+        h4 {
             color: $g-green;
+        }
+        a {
+            background: linear-gradient(to bottom, $g-green 0%, $g-green 100%);
+            background-position: 0 100%;
+            background-repeat: repeat-x;
+            background-size: 3px 3px;
+        }
+        a:hover {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%2334a853' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+            background-position: 0 100%;
+            background-size: auto 6px;
+            background-repeat: repeat-x;
+            text-decoration: none;
         }
     }
     .grid {
