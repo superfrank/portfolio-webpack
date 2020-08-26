@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // array with texts to type in typewriter
     var dataText = [
         "Show me a creative cover letter",
-        "What makes a good UX engineer?",
+        "What makes a good interaction designer?",
         "Who should I hire?",
     ];
 
