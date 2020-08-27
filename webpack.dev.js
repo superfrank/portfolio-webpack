@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         index: "./src/index.js",
         internet: "./src/project/internet.js",
+        worldcup: "./src/project/world-cup.js",
         tweenmax: "./src/assets/TweenMax.min.js",
         hellogoogle: "./src/onepage/hello-google.js",
     },
@@ -120,6 +121,12 @@ module.exports = {
             inject: true,
             chunks: ["internet"],
             filename: "internet.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/project/world-cup.html",
+            inject: true,
+            chunks: ["worldcup"],
+            filename: "world-cup.html",
         }),
         new HtmlWebpackPlugin({
             template: "./src/onepage/hello-google.html",

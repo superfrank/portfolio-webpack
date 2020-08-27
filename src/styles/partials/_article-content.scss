@@ -29,6 +29,11 @@
             margin-bottom: -4px;
         }
         &__background {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+        &__background--brand {
             background-color: $brand-1;
             display: flex;
             justify-content: center;
@@ -60,6 +65,15 @@
             }
         }
         &__mask {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 0px 0px;
+            overflow: hidden;
+            @include mq(desktop) {
+                box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 0px 0px;
+            }
+        }
+        &__mask--brand {
             box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.4);
             border-radius: 0 0 4px 4px;
             overflow: hidden;
@@ -68,7 +82,7 @@
                 border-radius: 0 0 8px 8px;
             }
         }
-        &__mask--mobile {
+        &__mask--brand--mobile {
             box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.4);
             border-radius: 8px;
             overflow: hidden;

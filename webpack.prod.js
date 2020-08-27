@@ -12,6 +12,7 @@ module.exports = {
     entry: {
         index: "./src/index.js",
         internet: "./src/project/internet.js",
+        worldcup: "./src/project/world-cup.js",
         tweenmax: "./src/assets/TweenMax.min.js",
         hellogoogle: "./src/onepage/hello-google.js",
     },
@@ -126,6 +127,13 @@ module.exports = {
             inject: "body",
             chunks: ["internet"],
             filename: "internet.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/project/world-cup.html",
+            // Inject the js bundle at the end of the body of the given template
+            inject: "body",
+            chunks: ["worldcup"],
+            filename: "world-cup.html",
         }),
         new HtmlWebpackPlugin({
             template: "./src/onepage/hello-google.html",
