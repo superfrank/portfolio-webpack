@@ -1,0 +1,43 @@
+.article--blue {
+    .header {
+        background-color: $blue;
+    }
+    .introduction {
+        background-color: darken($blue, 10%);
+    }
+    .information {
+
+    &__meta {
+        color: darken($blue, 30%);
+    }
+}
+    .image  {
+        &__background--brand {
+            background-color: $blue;
+        }
+    }
+    .caption {
+        &__header {
+            color: darken($blue, 10%);
+        }
+    }
+}
+
+
+.article--world-cup {
+    .header {
+    &-container {
+        margin-top: 10px;
+        margin-bottom: 0px;
+
+        @include mq(wide) {
+        top: 2.5vh;
+    }
+
+            img {
+                align-self: end;
+            }
+    }
+}
+}
+
