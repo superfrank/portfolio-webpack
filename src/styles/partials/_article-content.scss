@@ -45,9 +45,12 @@
         &__container {
             padding-top: 5vw;
             padding-bottom: 5vw;
-            max-width: 90%;
+            max-width: 80%;
             height: auto;
             position: relative;
+        }
+        &__square {
+            max-width: 70%;
         }
         &__container__mobile {
             max-width: 40vw;
