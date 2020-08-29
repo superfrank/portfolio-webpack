@@ -39,8 +39,11 @@
             justify-content: center;
             overflow: hidden;
         }
-        &__background--blue {
-            background-color: $brand-1;
+        &__background--white {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
         }
         &__container {
             padding-top: 5vw;
