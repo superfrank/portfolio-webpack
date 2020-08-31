@@ -53,6 +53,7 @@
         font-size: $font-size-five;
         color: $black;
         padding-left: 0.4rem;
+        padding-right: 0.4rem;
         line-height: 1;
 
         @include mq(desktop) {
@@ -81,6 +82,14 @@
     @include mq(desktop) {
         margin-top: 2.5vw;
     }
+    //     &__left {
+    //     display: flex;
+    //     width: 40%;
+    // }
+    // &__right {
+    //     display: flex;
+    //     width: 40%;
+    // }
 }
 
 .mickey-hand__wiggle {

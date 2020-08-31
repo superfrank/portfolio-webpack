@@ -27,9 +27,59 @@
     }
 }
 
+.article--gold {
+    p {
+        a {
+        color: $gold;
+    } }
+
+    h1, .information__data, .headline__link, .standfirst {
+        color: #121212;
+    }
+    .header {
+        background-color: #FEF8F3;
+    }
+    .introduction {
+        background-color: $gold;
+    }
+    .information {
+
+    &__meta {
+        color: darken($gold, 50%);
+    }
+}
+    .image  {
+        &__background--brand {
+            background-color: $gold;
+        }
+    }
+    .caption {
+        &__header {
+            color: darken($gold, 10%);
+        }
+    }
+}
+
 
 .article--world-cup {
     .header {
+    &-container {
+        margin-top: 10px;
+        margin-bottom: 0px;
+
+        @include mq(wide) {
+        top: 2.5vh;
+    }
+
+            img {
+                align-self: end;
+            }
+    }
+}
+}
+
+.article--uk-election {
+        .header {
     &-container {
         margin-top: 10px;
         margin-bottom: 0px;
