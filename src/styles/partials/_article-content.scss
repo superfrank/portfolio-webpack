@@ -35,22 +35,26 @@
         }
         &__background--brand {
             background-color: $brand-1;
-            display: flex;
-            justify-content: center;
-            overflow: hidden;
+            margin-left: -10px;
+            margin-right: -10px;
+
+            @include mq(desktop) {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
         }
         &__background--white {
             background-color: white;
-            display: flex;
-            justify-content: center;
-            overflow: hidden;
         }
         &__container {
             padding-top: 5vw;
             padding-bottom: 5vw;
-            max-width: 80%;
+            max-width: calc(100% - 20px);
             height: auto;
             position: relative;
+            @include mq(desktop) {
+                max-width: 80%;
+            }
         }
         &__square {
             max-width: 70%;
