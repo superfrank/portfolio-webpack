@@ -330,6 +330,12 @@ $g-green: #34a853;
             background-repeat: repeat-x;
             text-decoration: none;
         }
+
+        .footer {
+            a {
+                background: none;
+            }
+        }
     }
     .grid {
         margin: 0;
@@ -343,7 +349,7 @@ $g-green: #34a853;
         }
     }
 
-    .mickey-hand {
+    .big-mickey-hand {
         padding-top: 10px;
         svg {
             width: 20vw;
@@ -359,7 +365,7 @@ $g-green: #34a853;
         }
     }
 
-    .mickey-hand__wave {
+    .big-mickey-hand__wave {
         svg {
             fill: $g-blue;
             animation-name: wave; /* Refers to the name of your @keyframes element below */
@@ -368,28 +374,28 @@ $g-green: #34a853;
             transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
         }
     }
-    .mickey-hand__call {
+    .big-mickey-hand__call {
         animation-name: wave; /* Refers to the name of your @keyframes element below */
         animation-duration: 5s; /* Change to speed up or slow down */
         animation-iteration-count: infinite; /* Never stop waving :) */
         transform-origin: 5% 40%; /* Pivot around the bottom-left palm */
     }
-    .mickey-hand__one {
+    .big-mickey-hand__one {
         svg {
             fill: $g-red;
         }
     }
-    .mickey-hand__two {
+    .big-mickey-hand__two {
         svg {
             fill: $g-yellow;
         }
     }
-    .mickey-hand__three {
+    .big-mickey-hand__three {
         svg {
             fill: $g-blue;
         }
     }
-    .mickey-hand__four {
+    .big-mickey-hand__four {
         svg {
             fill: $g-green;
         }
@@ -463,5 +469,20 @@ $g-green: #34a853;
                 transform: translate3d(0, 0, 0);
             }
         }
+    }
+
+    .footer__one-page {
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        a:hover {
+            color: $g-green;
+        }
+    }
+    .g-green {
+        color: $g-green;
+    }
+    .footer-no-margin {
+        padding-top: 5px;
     }
 }
