@@ -20,7 +20,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'UA-22515855-4');
   </script>
 </head>
@@ -234,6 +233,34 @@
             <div class="image__mask--brand">
               <video class="image__floating video" preload="auto" playsinline="" autoplay="" loop="" muted=""
                 autobuffer="false" poster="<%= require('../../src/assets/internet/media/poster-internet-china.png') %>">
+                <source src="<%= require('../../src/assets/uk-election/article/media/battleground-fade.mp4') %>"
+                  type="video/mp4" />
+                <source src="<%= require('../../src/assets/uk-election/article/media/battleground-fade.webm') %>"
+                  type="video/webm" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid item">
+        <div class="text grid__1-3">
+          <p class="text__body grid__2-3">I created a prototype of a results page to run some testing with the UX team.
+            I wanted to find out how to best present
+            information that was easy to digest and made sense to all users.
+          </p>
+          <p class="text__body grid__2-3">Users found the Battlegrounds section confusing, so I worked with a graphics
+            journalist to make it simpler. We chose to focus on key seats instead and designed slope charts to make it
+            clear
+            which party had won.
+          </p>
+        </div>
+      </div>
+      <div class="grid item">
+        <div class="image grid__1-4 image__background image__background--brand">
+          <div class="image__container">
+            <div class="image__mask--brand">
+              <video class="image__floating video" preload="auto" playsinline="" autoplay="" loop="" muted=""
+                autobuffer="false" poster="<%= require('../../src/assets/internet/media/poster-internet-china.png') %>">
                 <source src="<%= require('../../src/assets/uk-election/article/media/election-page.mp4') %>"
                   type="video/mp4" />
                 <source src="<%= require('../../src/assets/uk-election/article/media/election-page.webm') %>"
@@ -325,7 +352,7 @@
               <div class="footer__description description">World Cup 2018</div>
             </div>
           </a>
-          <a class="" href="https://tobefrank.co.uk/world-cup">
+          <a class="" href="https://tobefrank.co.uk/internet">
             <div class="mickey-hand__wiggle">
               <div class="footer__description description">The internet</div>
               <div class="mickey-hand">
