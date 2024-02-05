@@ -84,10 +84,10 @@
         z-index: -1;
         margin-top: -5%;
         @include mq(desktop) {
-            height: 60%;
+            height: 65%;
         }
         @include mq(wide) {
-            height: 360px;
+            height: 400px;
         }
     }
     &__circle {
