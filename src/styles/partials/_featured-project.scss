@@ -10,7 +10,7 @@
         }
     }
     &__image {
-        max-width: 90%;
+        max-width: 75%;
         justify-self: center;
         filter:drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25)) ;
         z-index: 0;
@@ -19,13 +19,19 @@
             width: 100%;
             height: auto;
         }
+        
+        video {
+            width: 100%;
+            height: auto;
+ 
+        }
 
         @include mq(desktop) {
-            max-width: 500px;
+            max-width: 400px;
         }
 
         @include mq(wide) {
-            max-width: 672px;
+            max-width: 600px;
         }
 
         .gif {
@@ -93,12 +99,12 @@
     &__circle {
         position: absolute;
         bottom: -13%;
-        right: 20.5vw;
+        right: 2.5vw;
         height: 8rem;
         width: 8rem;
         z-index: 1;
         @include mq(mobileLandscape) {
-            right: 22vw;
+            right: 2.5vw;
             bottom: -36px;
         }
 
@@ -106,16 +112,16 @@
             bottom: -44px;
             height: 10rem;
             width: 10rem;
-            right: 23vw;
+            right: 5vw;
             svg {
                 height: auto;
                 width: auto;
             }
             @include mq(desktop) {
-                right: 11.5rem;
+                right: -11%;
             }
             @include mq(wide) {
-                right: 22.5%;
+                right: -11%;
                 height: 14rem;
                 width: 14rem;
                 bottom: -64px;
