@@ -5,6 +5,8 @@ import anime from "animejs";
 import imagesLoaded from "imagesloaded";
 import { gsap } from "gsap";
 
+console.log(anime, gsap, inView);
+
 document.addEventListener("DOMContentLoaded", () => {
     // console.log("page-loaded");
 });
@@ -67,7 +69,7 @@ if (mq.matches) {
             );
         })
         .on("exit", () => {
-            // console.log("out-view");
+            console.log("out-view");
         });
 } else {
     inView(".animated-type h2")
@@ -81,7 +83,7 @@ if (mq.matches) {
             );
         })
         .on("exit", () => {
-            // console.log("out-view");
+            console.log("out-view");
         });
 }
 
