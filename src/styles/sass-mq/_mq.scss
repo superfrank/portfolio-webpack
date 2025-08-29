@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:math";
 
 // To enable support for browsers that do not support @media queries,
 // (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
@@ -16,7 +17,7 @@ $mq-breakpoints: (
     tablet: 740px,
     desktop: 980px,
     wide: 1300px,
-    ultraWide: 1800px
+    ultraWide: 1800px,
 ) !default;
 
 // Define the breakpoint from the $mq-breakpoints list that should
@@ -36,7 +37,7 @@ $mq-show-breakpoints: () !default;
     } @else if (unit($px) == em) {
         @return $px;
     }
-    @return ($px / $base-font-size) * 1em;
+    @return math.div($px, $base-font-size) * 1em;
 }
 
 @function mq-get-breakpoint-width($name) {
@@ -149,7 +150,7 @@ $mq-show-breakpoints: () !default;
 // Usage: $mq-breakpoints: mq-add-breakpoint(tvscreen, 1920px);
 @function mq-add-breakpoint($name, $breakpoint) {
     $new-breakpoint: (
-        $name: $breakpoint
+        $name: $breakpoint,
     );
     @return map-merge($mq-breakpoints, $new-breakpoint);
 }

@@ -74,11 +74,12 @@
 }
 
 .footer__article {
+    border-top: none;
+    margin-top: 2.8rem;
     svg {
         margin-top: 0.3vw;
     }
-    border-top: none;
-    margin-top: 2.8rem;
+
     @include mq(desktop) {
         margin-top: 2.5vw;
     }
