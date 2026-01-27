@@ -6,6 +6,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const buildPath = path.resolve(__dirname, "public_html");
 
 module.exports = {
+      ignoreWarnings: [
+    /Deprecation Warning.*Sass @import/
+  ],
     devtool: "source-map",
     entry: {
         index: "./src/index.js",

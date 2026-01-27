@@ -35,7 +35,19 @@ module.exports = {
             },
             {
                 test: /\.(scss|css)$/,
-                use: ["style-loader", "css-loader", "sass-loader"],
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    {
+                    loader: "sass-loader",
+                    options: {
+                        sassOptions: {
+                        quietDeps: true,
+                             quiet: true,
+                        },
+                    },
+                    },
+                ],
             },
             {
                 test: /\.(gif|svg)$/i,
