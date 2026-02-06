@@ -58,12 +58,12 @@ const animateText = (selector, yOffset, delay) => {
 if (mq.matches) {
     inView(".animated-type h2")
         .on("enter", () => {
-            animateText(".first", "16vw", 1000);
-            animateText(".second", "16.5vw", 1050);
+            animateText(".first", "12vw", 1000);
+            animateText(".second", "12.5vw", 1050);
             gsap.fromTo(
                 ".third",
-                { y: "16vw" },
-                { y: "16vw", delay: 1100, duration: 1, ease: "power1.inOut" }
+                { y: "12vw" },
+                { y: "12vw", delay: 1100, duration: 1, ease: "power1.inOut" }
             );
         })
         .on("exit", () => {
@@ -72,8 +72,8 @@ if (mq.matches) {
 } else {
     inView(".animated-type h2")
         .on("enter", () => {
-            animateText(".first", "8vw", 1000);
-            animateText(".second", "8.5vw", 1050);
+            animateText(".first", "6vw", 1000);
+            animateText(".second", "6.5vw", 1050);
             gsap.fromTo(
                 ".third",
                 { y: "8vw" },

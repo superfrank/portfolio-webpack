@@ -1,23 +1,25 @@
 .about {
     text-align: left;
     display: block;
-    margin-bottom: 40vw;
+    margin-bottom: 30vw;
 
     @include mq(desktop) {
         margin-bottom: 8vw;
     }
 
     &__header {
-        font-size: $font-size-ten;
-        line-height: 1;
+        font-size: $font-size-eight;
+        line-height: 1.2;
         // padding top calculates logo size as it's absolutely positioned
-        padding-top: calc(6vw + 1rem);
+        padding-top: calc(8.5vw + 1rem);
+
 
         @include mq(desktop) {
-            font-size: $font-size-five;
-            padding-top: calc(1.6vw + 32px);
+            font-size: $font-size-four;
+            padding-top: calc(2.1vw + 32px);
         }
     }
+   
 }
 
 .info__main {
