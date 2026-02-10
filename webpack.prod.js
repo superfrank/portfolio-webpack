@@ -17,6 +17,7 @@ module.exports = {
         ukelection: "./src/project/uk-election.js",
         tweenmax: "./src/assets/TweenMax.min.js",
         hellogoogle: "./src/onepage/hello-google.js",
+        reacthome: "./src/react/home/main.jsx",
     },
     output: {
         filename: "[name].[contenthash:20].js",
@@ -26,13 +27,14 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
                     options: {
                         presets: [
                             ["@babel/preset-env", { targets: "defaults" }],
+                            "@babel/preset-react",
                         ],
                     },
                 },
@@ -99,6 +101,12 @@ module.exports = {
             inject: "body",
             chunks: ["hellogoogle"],
             filename: "hello-google.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./react-index.html",
+            inject: "body",
+            chunks: ["reacthome"],
+            filename: "react/index.html",
         }),
         new MiniCssExtractPlugin({
             filename: "styles.[contenthash].css", // Extract CSS into separate files with content hash

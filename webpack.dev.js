@@ -10,6 +10,7 @@ module.exports = {
         ukelection: "./src/project/uk-election.js",
         tweenmax: "./src/assets/TweenMax.min.js",
         hellogoogle: "./src/onepage/hello-google.js",
+        reacthome: "./src/react/home/main.jsx",
     },
     devServer: {
         port: 8080,
@@ -24,12 +25,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
                     options: {
-                        presets: ["@babel/preset-env"],
+                        presets: ["@babel/preset-env", "@babel/preset-react"],
                     },
                 },
             },
@@ -102,6 +103,12 @@ module.exports = {
             inject: true,
             chunks: ["hellogoogle"],
             filename: "hello-google.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./react-index.html",
+            inject: true,
+            chunks: ["reacthome"],
+            filename: "react/index.html",
         }),
     ],
 };
