@@ -17,6 +17,7 @@ module.exports = {
         ukelection: "./src/project/uk-election.js",
         tweenmax: "./src/assets/TweenMax.min.js",
         hellogoogle: "./src/onepage/hello-google.js",
+        nomow: "./src/project/no-mow.js",
     },
     output: {
         filename: "[name].[contenthash:20].js",
@@ -99,6 +100,12 @@ module.exports = {
             inject: "body",
             chunks: ["hellogoogle"],
             filename: "hello-google.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/project/no-mow.html",
+            inject: "body",
+            chunks: ["nomow"],
+            filename: "no-mow.html",
         }),
         new MiniCssExtractPlugin({
             filename: "styles.[contenthash].css", // Extract CSS into separate files with content hash

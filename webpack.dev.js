@@ -10,6 +10,7 @@ module.exports = {
         ukelection: "./src/project/uk-election.js",
         tweenmax: "./src/assets/TweenMax.min.js",
         hellogoogle: "./src/onepage/hello-google.js",
+        nomow: "./src/project/no-mow.js",
     },
     devServer: {
         port: 8080,
@@ -102,6 +103,12 @@ module.exports = {
             inject: true,
             chunks: ["hellogoogle"],
             filename: "hello-google.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/project/no-mow.html",
+            inject: true,
+            chunks: ["nomow"],
+            filename: "no-mow.html",
         }),
     ],
 };
