@@ -60,6 +60,35 @@
     }
 }
 
+.article--green {
+    p {
+        a {
+        color: $green;
+    } }
+    .header {
+        background-color: $green;
+    }
+    .introduction {
+        background-color: darken($green, 10%);
+    }
+    .information {
+
+    &__meta {
+        color: darken($green, 30%);
+    }
+}
+    .image  {
+        &__background--brand {
+            background-color: $green;
+        }
+    }
+    .caption {
+        &__header {
+            color: darken($green, 10%);
+        }
+    }
+}
+
 
 .article--world-cup {
     .header {
@@ -95,3 +124,24 @@
 }
 }
 
+.article--no-mow {
+    .header {
+        &.wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &-container {
+            max-width: 100vw;
+            width: 100vw;
+            margin-bottom: 0;
+        }
+
+        .header-image__video {
+            display: block;
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
