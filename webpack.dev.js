@@ -22,6 +22,9 @@ module.exports = {
         __dirname: true,
         __filename: true,
     },
+    resolve: {
+        extensions: [".js", ".jsx", ".json"],
+    },
     module: {
         rules: [
             {

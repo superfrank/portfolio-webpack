@@ -24,6 +24,9 @@ module.exports = {
         path: buildPath,
         clean: true, // Ensures the output directory is cleaned before each build
     },
+    resolve: {
+        extensions: [".js", ".jsx", ".json"],
+    },
     module: {
         rules: [
             {
